@@ -1,0 +1,37 @@
+C:\WorkSpace\Sistema_Biozono\bin\Debug\Sistema_Biozono.exe.config
+C:\WorkSpace\Sistema_Biozono\bin\Debug\Sistema_Biozono.exe
+C:\WorkSpace\Sistema_Biozono\bin\Debug\Sistema_Biozono.pdb
+C:\WorkSpace\Sistema_Biozono\bin\Debug\Capa_Presentacion.dll
+C:\WorkSpace\Sistema_Biozono\bin\Debug\Capa_Negocio.dll
+C:\WorkSpace\Sistema_Biozono\bin\Debug\Capa_Datos.dll
+C:\WorkSpace\Sistema_Biozono\bin\Debug\Capa_Presentacion.pdb
+C:\WorkSpace\Sistema_Biozono\bin\Debug\Capa_Negocio.pdb
+C:\WorkSpace\Sistema_Biozono\bin\Debug\Capa_Datos.pdb
+C:\WorkSpace\Sistema_Biozono\bin\Debug\Capa_Datos.dll.config
+C:\WorkSpace\Sistema_Biozono\obj\Debug\Sistema_Biozono.csprojAssemblyReference.cache
+C:\WorkSpace\Sistema_Biozono\obj\Debug\Sistema_Biozono.Form1.resources
+C:\WorkSpace\Sistema_Biozono\obj\Debug\Sistema_Biozono.Properties.Resources.resources
+C:\WorkSpace\Sistema_Biozono\obj\Debug\Sistema_Biozono.csproj.GenerateResource.cache
+C:\WorkSpace\Sistema_Biozono\obj\Debug\Sistema_Biozono.csproj.CopyComplete
+C:\WorkSpace\Sistema_Biozono\obj\Debug\Sistema_Biozono.exe
+C:\WorkSpace\Sistema_Biozono\obj\Debug\Sistema_Biozono.pdb
+D:\DatosPerfil\SIGSA\Dropbox\ProyectoBiozono\Sistema_Biozono\bin\Debug\Sistema_Biozono.exe.config
+D:\DatosPerfil\SIGSA\Dropbox\ProyectoBiozono\Sistema_Biozono\bin\Debug\Sistema_Biozono.exe
+D:\DatosPerfil\SIGSA\Dropbox\ProyectoBiozono\Sistema_Biozono\bin\Debug\Sistema_Biozono.pdb
+D:\DatosPerfil\SIGSA\Dropbox\ProyectoBiozono\Sistema_Biozono\bin\Debug\Capa_Presentacion.dll
+D:\DatosPerfil\SIGSA\Dropbox\ProyectoBiozono\Sistema_Biozono\bin\Debug\Capa_Negocio.dll
+D:\DatosPerfil\SIGSA\Dropbox\ProyectoBiozono\Sistema_Biozono\bin\Debug\Capa_Datos.dll
+D:\DatosPerfil\SIGSA\Dropbox\ProyectoBiozono\Sistema_Biozono\bin\Debug\Capa_Presentacion.pdb
+D:\DatosPerfil\SIGSA\Dropbox\ProyectoBiozono\Sistema_Biozono\bin\Debug\Capa_Negocio.pdb
+D:\DatosPerfil\SIGSA\Dropbox\ProyectoBiozono\Sistema_Biozono\bin\Debug\Capa_Datos.pdb
+D:\DatosPerfil\SIGSA\Dropbox\ProyectoBiozono\Sistema_Biozono\bin\Debug\Capa_Datos.dll.config
+D:\DatosPerfil\SIGSA\Dropbox\ProyectoBiozono\Sistema_Biozono\obj\Debug\Sistema_Biozono.csprojAssemblyReference.cache
+D:\DatosPerfil\SIGSA\Dropbox\ProyectoBiozono\Sistema_Biozono\obj\Debug\Sistema_Biozono.Form1.resources
+D:\DatosPerfil\SIGSA\Dropbox\ProyectoBiozono\Sistema_Biozono\obj\Debug\Sistema_Biozono.Properties.Resources.resources
+D:\DatosPerfil\SIGSA\Dropbox\ProyectoBiozono\Sistema_Biozono\obj\Debug\Sistema_Biozono.csproj.GenerateResource.cache
+D:\DatosPerfil\SIGSA\Dropbox\ProyectoBiozono\Sistema_Biozono\obj\Debug\Sistema_Biozono.csproj.CoreCompileInputs.cache
+D:\DatosPerfil\SIGSA\Dropbox\ProyectoBiozono\Sistema_Biozono\obj\Debug\Sistema_Biozono.csproj.CopyComplete
+D:\DatosPerfil\SIGSA\Dropbox\ProyectoBiozono\Sistema_Biozono\obj\Debug\Sistema_Biozono.exe
+D:\DatosPerfil\SIGSA\Dropbox\ProyectoBiozono\Sistema_Biozono\obj\Debug\Sistema_Biozono.pdb
+C:\Users\Urii Uresti\Dropbox\ProyectoBiozono\Sistema_Biozono\obj\Debug\Sistema_Biozono.exe
+C:\Users\Urii Uresti\Dropbox\ProyectoBiozono\Sistema_Biozono\obj\Debug\Sistema_Biozono.pdb

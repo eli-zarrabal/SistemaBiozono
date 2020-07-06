@@ -1,0 +1,21 @@
+C:\WorkSpace\Sistema_Biozono\Capa_Negocio\bin\Debug\Capa_Negocio.dll
+C:\WorkSpace\Sistema_Biozono\Capa_Negocio\bin\Debug\Capa_Negocio.pdb
+C:\WorkSpace\Sistema_Biozono\Capa_Negocio\bin\Debug\Capa_Datos.dll
+C:\WorkSpace\Sistema_Biozono\Capa_Negocio\bin\Debug\Capa_Datos.pdb
+C:\WorkSpace\Sistema_Biozono\Capa_Negocio\bin\Debug\Capa_Datos.dll.config
+C:\WorkSpace\Sistema_Biozono\Capa_Negocio\obj\Debug\Capa_Negocio.csprojAssemblyReference.cache
+C:\WorkSpace\Sistema_Biozono\Capa_Negocio\obj\Debug\Capa_Negocio.csproj.CopyComplete
+C:\WorkSpace\Sistema_Biozono\Capa_Negocio\obj\Debug\Capa_Negocio.dll
+C:\WorkSpace\Sistema_Biozono\Capa_Negocio\obj\Debug\Capa_Negocio.pdb
+D:\DatosPerfil\SIGSA\Dropbox\ProyectoBiozono\Sistema_Biozono\Capa_Negocio\bin\Debug\Capa_Negocio.dll
+D:\DatosPerfil\SIGSA\Dropbox\ProyectoBiozono\Sistema_Biozono\Capa_Negocio\bin\Debug\Capa_Negocio.pdb
+D:\DatosPerfil\SIGSA\Dropbox\ProyectoBiozono\Sistema_Biozono\Capa_Negocio\bin\Debug\Capa_Datos.dll
+D:\DatosPerfil\SIGSA\Dropbox\ProyectoBiozono\Sistema_Biozono\Capa_Negocio\bin\Debug\Capa_Datos.pdb
+D:\DatosPerfil\SIGSA\Dropbox\ProyectoBiozono\Sistema_Biozono\Capa_Negocio\bin\Debug\Capa_Datos.dll.config
+D:\DatosPerfil\SIGSA\Dropbox\ProyectoBiozono\Sistema_Biozono\Capa_Negocio\obj\Debug\Capa_Negocio.csprojAssemblyReference.cache
+D:\DatosPerfil\SIGSA\Dropbox\ProyectoBiozono\Sistema_Biozono\Capa_Negocio\obj\Debug\Capa_Negocio.csproj.CoreCompileInputs.cache
+D:\DatosPerfil\SIGSA\Dropbox\ProyectoBiozono\Sistema_Biozono\Capa_Negocio\obj\Debug\Capa_Negocio.csproj.CopyComplete
+D:\DatosPerfil\SIGSA\Dropbox\ProyectoBiozono\Sistema_Biozono\Capa_Negocio\obj\Debug\Capa_Negocio.dll
+D:\DatosPerfil\SIGSA\Dropbox\ProyectoBiozono\Sistema_Biozono\Capa_Negocio\obj\Debug\Capa_Negocio.pdb
+C:\Users\Urii Uresti\Dropbox\ProyectoBiozono\Sistema_Biozono\Capa_Negocio\obj\Debug\Capa_Negocio.dll
+C:\Users\Urii Uresti\Dropbox\ProyectoBiozono\Sistema_Biozono\Capa_Negocio\obj\Debug\Capa_Negocio.pdb

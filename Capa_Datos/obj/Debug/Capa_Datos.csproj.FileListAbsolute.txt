@@ -1,0 +1,13 @@
+C:\WorkSpace\Sistema_Biozono\Capa_Datos\bin\Debug\Capa_Datos.dll.config
+C:\WorkSpace\Sistema_Biozono\Capa_Datos\bin\Debug\Capa_Datos.dll
+C:\WorkSpace\Sistema_Biozono\Capa_Datos\bin\Debug\Capa_Datos.pdb
+C:\WorkSpace\Sistema_Biozono\Capa_Datos\obj\Debug\Capa_Datos.dll
+C:\WorkSpace\Sistema_Biozono\Capa_Datos\obj\Debug\Capa_Datos.pdb
+C:\WorkSpace\Sistema_Biozono\Capa_Datos\obj\Debug\Capa_Datos.csprojAssemblyReference.cache
+D:\DatosPerfil\SIGSA\Dropbox\ProyectoBiozono\Sistema_Biozono\Capa_Datos\bin\Debug\Capa_Datos.dll.config
+D:\DatosPerfil\SIGSA\Dropbox\ProyectoBiozono\Sistema_Biozono\Capa_Datos\bin\Debug\Capa_Datos.dll
+D:\DatosPerfil\SIGSA\Dropbox\ProyectoBiozono\Sistema_Biozono\Capa_Datos\bin\Debug\Capa_Datos.pdb
+D:\DatosPerfil\SIGSA\Dropbox\ProyectoBiozono\Sistema_Biozono\Capa_Datos\obj\Debug\Capa_Datos.csprojAssemblyReference.cache
+D:\DatosPerfil\SIGSA\Dropbox\ProyectoBiozono\Sistema_Biozono\Capa_Datos\obj\Debug\Capa_Datos.csproj.CoreCompileInputs.cache
+D:\DatosPerfil\SIGSA\Dropbox\ProyectoBiozono\Sistema_Biozono\Capa_Datos\obj\Debug\Capa_Datos.dll
+D:\DatosPerfil\SIGSA\Dropbox\ProyectoBiozono\Sistema_Biozono\Capa_Datos\obj\Debug\Capa_Datos.pdb
