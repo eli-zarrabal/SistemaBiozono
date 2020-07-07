@@ -35,3 +35,21 @@ D:\DatosPerfil\SIGSA\Dropbox\ProyectoBiozono\Sistema_Biozono\obj\Debug\Sistema_B
 D:\DatosPerfil\SIGSA\Dropbox\ProyectoBiozono\Sistema_Biozono\obj\Debug\Sistema_Biozono.pdb
 C:\Users\Urii Uresti\Dropbox\ProyectoBiozono\Sistema_Biozono\obj\Debug\Sistema_Biozono.exe
 C:\Users\Urii Uresti\Dropbox\ProyectoBiozono\Sistema_Biozono\obj\Debug\Sistema_Biozono.pdb
+C:\ProyectosElizabeth\Sistema_Biozono\bin\Debug\Sistema_Biozono.exe.config
+C:\ProyectosElizabeth\Sistema_Biozono\bin\Debug\Sistema_Biozono.exe
+C:\ProyectosElizabeth\Sistema_Biozono\bin\Debug\Sistema_Biozono.pdb
+C:\ProyectosElizabeth\Sistema_Biozono\bin\Debug\Capa_Presentacion.dll
+C:\ProyectosElizabeth\Sistema_Biozono\bin\Debug\Capa_Negocio.dll
+C:\ProyectosElizabeth\Sistema_Biozono\bin\Debug\Capa_Datos.dll
+C:\ProyectosElizabeth\Sistema_Biozono\bin\Debug\Capa_Presentacion.pdb
+C:\ProyectosElizabeth\Sistema_Biozono\bin\Debug\Capa_Negocio.pdb
+C:\ProyectosElizabeth\Sistema_Biozono\bin\Debug\Capa_Datos.pdb
+C:\ProyectosElizabeth\Sistema_Biozono\bin\Debug\Capa_Datos.dll.config
+C:\ProyectosElizabeth\Sistema_Biozono\obj\Debug\Sistema_Biozono.csprojAssemblyReference.cache
+C:\ProyectosElizabeth\Sistema_Biozono\obj\Debug\Sistema_Biozono.Form1.resources
+C:\ProyectosElizabeth\Sistema_Biozono\obj\Debug\Sistema_Biozono.Properties.Resources.resources
+C:\ProyectosElizabeth\Sistema_Biozono\obj\Debug\Sistema_Biozono.csproj.GenerateResource.cache
+C:\ProyectosElizabeth\Sistema_Biozono\obj\Debug\Sistema_Biozono.csproj.CoreCompileInputs.cache
+C:\ProyectosElizabeth\Sistema_Biozono\obj\Debug\Sistema_Biozono.csproj.CopyComplete
+C:\ProyectosElizabeth\Sistema_Biozono\obj\Debug\Sistema_Biozono.exe
+C:\ProyectosElizabeth\Sistema_Biozono\obj\Debug\Sistema_Biozono.pdb

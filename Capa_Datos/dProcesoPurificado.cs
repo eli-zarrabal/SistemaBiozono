@@ -170,7 +170,7 @@ namespace Capa_Datos
 
         }
 
-        //Método BuscarNombre
+    
         public DataTable BuscarFolio(dProcesoPurificado Purificado)
         {
             DataTable DtResultado = new DataTable("purificado");
@@ -201,7 +201,36 @@ namespace Capa_Datos
             return DtResultado;
 
         }
+        public DataTable BuscarEmpleado(dProcesoPurificado Purificado)
+        {
+            DataTable DtResultado = new DataTable("purificado");
+            SqlConnection SqlCon = new SqlConnection();
+            try
+            {
+                SqlCon.ConnectionString = Conexion.Cn;
+                SqlCommand SqlCmd = new SqlCommand();
+                SqlCmd.Connection = SqlCon;
+                SqlCmd.CommandText = "p_buscar_proceso_purificado_nombre_empleado";
+                SqlCmd.CommandType = CommandType.StoredProcedure;
 
+                SqlParameter ParTextoBuscar = new SqlParameter();
+                ParTextoBuscar.ParameterName = "@textobuscar";
+                ParTextoBuscar.SqlDbType = SqlDbType.VarChar;
+                ParTextoBuscar.Size = 50;
+                ParTextoBuscar.Value = Purificado.TextoBuscar;
+                SqlCmd.Parameters.Add(ParTextoBuscar);
+
+                SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
+                SqlDat.Fill(DtResultado);
+
+            }
+            catch (Exception ex)
+            {
+                DtResultado = null;
+            }
+            return DtResultado;
+
+        }
 
         //Método Eliminar
         public string Eliminar(dProcesoPurificado Purificado)

@@ -47,6 +47,7 @@
     <Compile Include="dDetalleIngreso.cs" />
     <Compile Include="dDetalleVenta.cs" />
     <Compile Include="dIngreso.cs" />
+    <Compile Include="dProcesoClarificado.cs" />
     <Compile Include="dProcesoPurificado.cs" />
     <Compile Include="dProducto.cs" />
     <Compile Include="dEmpleado.cs" />

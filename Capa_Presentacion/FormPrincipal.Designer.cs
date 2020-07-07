@@ -72,6 +72,7 @@
             this.MnuVer = new System.Windows.Forms.ToolStripMenuItem();
             this.procesosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.procesoPurificadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.procesoClarificadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.menuStrip.SuspendLayout();
@@ -164,18 +165,18 @@
             this.indexToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("indexToolStripMenuItem.Image")));
             this.indexToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Black;
             this.indexToolStripMenuItem.Name = "indexToolStripMenuItem";
-            this.indexToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.indexToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.indexToolStripMenuItem.Text = "&Índice";
             // 
             // toolStripSeparator8
             // 
             this.toolStripSeparator8.Name = "toolStripSeparator8";
-            this.toolStripSeparator8.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator8.Size = new System.Drawing.Size(221, 6);
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.aboutToolStripMenuItem.Text = "&Acerca de... ...";
             // 
             // toolStrip
@@ -301,7 +302,7 @@
             // artículosToolStripMenuItem
             // 
             this.artículosToolStripMenuItem.Name = "artículosToolStripMenuItem";
-            this.artículosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.artículosToolStripMenuItem.Size = new System.Drawing.Size(158, 26);
             this.artículosToolStripMenuItem.Text = "Productos";
             this.artículosToolStripMenuItem.Click += new System.EventHandler(this.artículosToolStripMenuItem_Click);
             // 
@@ -340,7 +341,7 @@
             // clientesToolStripMenuItem
             // 
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(144, 26);
             this.clientesToolStripMenuItem.Text = "Clientes";
             this.clientesToolStripMenuItem.Click += new System.EventHandler(this.clientesToolStripMenuItem_Click_1);
             // 
@@ -399,7 +400,8 @@
             // procesosToolStripMenuItem
             // 
             this.procesosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.procesoPurificadoToolStripMenuItem});
+            this.procesoPurificadoToolStripMenuItem,
+            this.procesoClarificadoToolStripMenuItem});
             this.procesosToolStripMenuItem.Name = "procesosToolStripMenuItem";
             this.procesosToolStripMenuItem.Size = new System.Drawing.Size(81, 24);
             this.procesosToolStripMenuItem.Text = "Procesos";
@@ -408,9 +410,16 @@
             // procesoPurificadoToolStripMenuItem
             // 
             this.procesoPurificadoToolStripMenuItem.Name = "procesoPurificadoToolStripMenuItem";
-            this.procesoPurificadoToolStripMenuItem.Size = new System.Drawing.Size(215, 26);
+            this.procesoPurificadoToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.procesoPurificadoToolStripMenuItem.Text = "Proceso Purificado";
             this.procesoPurificadoToolStripMenuItem.Click += new System.EventHandler(this.procesoPurificadoToolStripMenuItem_Click);
+            // 
+            // procesoClarificadoToolStripMenuItem
+            // 
+            this.procesoClarificadoToolStripMenuItem.Name = "procesoClarificadoToolStripMenuItem";
+            this.procesoClarificadoToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.procesoClarificadoToolStripMenuItem.Text = "Proceso Clarificado";
+            this.procesoClarificadoToolStripMenuItem.Click += new System.EventHandler(this.procesoClarificadoToolStripMenuItem_Click);
             // 
             // FormPrincipal
             // 
@@ -479,6 +488,7 @@
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.ToolStripMenuItem procesosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem procesoPurificadoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem procesoClarificadoToolStripMenuItem;
     }
 }
 

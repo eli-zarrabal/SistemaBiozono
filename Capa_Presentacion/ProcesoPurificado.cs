@@ -97,12 +97,12 @@ namespace Capa_Presentacion
             lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListado.Rows.Count);
         }
 
-        //private void BuscarLocalidad()
-        //{
-        //    this.dataListado.DataSource = NCliente.BuscarLocalidad(this.txtBuscar.Text);
-        //    this.OcultarColumnas();
-        //    lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListado.Rows.Count);
-        //}
+        private void BuscarEmpleado()
+        {
+            this.dataListado.DataSource = NProcesoPurificado.BuscarEmpleado(this.txtBuscar.Text);
+            this.OcultarColumnas();
+            lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListado.Rows.Count);
+        }
 
         private void ProcesoPurificado_Load(object sender, EventArgs e)
         {
@@ -116,12 +116,12 @@ namespace Capa_Presentacion
         //Para mostrar mensaje de confirmación
         private void MensajeOK(string Mensaje)
         {
-            MessageBox.Show(Mensaje, "Sistema Ventas", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show(Mensaje, "Sistema BIOZONO", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         //Para mostrar mensaje de error
         private void MensajeError(string Mensaje)
         {
-            MessageBox.Show(Mensaje, "Sistema Ventas", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            MessageBox.Show(Mensaje, "Sistema BIOZONO", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
         private void btnNuevo_Click(object sender, EventArgs e)
         {
@@ -217,7 +217,7 @@ namespace Capa_Presentacion
             }
             else if (cbBuscar.Text.Equals("Nombre Empleado"))
             {
-               // this.BuscarLocalidad();
+                this.BuscarEmpleado();
             }
         }
 
@@ -295,7 +295,6 @@ namespace Capa_Presentacion
 
         {
             this.txtFolioPurificado.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["Folio"].Value);
-            
             this.dtFecha_EntradaSodio.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["Fecha Entrada de Sodio"].Value);
             this.dtFecha_SalidaSodio.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["Fecha Salida de Sodio"].Value);
             this.txtIdPurificado.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["Id"].Value);
@@ -321,6 +320,10 @@ namespace Capa_Presentacion
         private void btnCancelar_Click(object sender, EventArgs e)
         {
 
+            this.IsNuevo = false;
+            this.Botones();
+            this.Limpiar();
+            this.Habilitar(false);
         }
     }
 }

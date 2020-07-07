@@ -60,6 +60,12 @@ namespace Capa_Negocio
             Obj.TextoBuscar = textobuscar;
             return Obj.BuscarFolio(Obj);
         }
+        public static DataTable BuscarEmpleado(string textobuscar)
+        {
+            dProcesoPurificado Obj = new dProcesoPurificado();
+            Obj.TextoBuscar = textobuscar;
+            return Obj.BuscarEmpleado(Obj);
+        }
 
 
     }
