@@ -11,66 +11,63 @@ using System.Windows.Forms;
 
 namespace Capa_Presentacion
 {
-    public partial class ProcesoClarificado : Form
+    public partial class Mantenimiento : Form
     {
-
 
         private bool IsEditar = false;
         private bool IsNuevo = false;
         public int IdEmpleado;
 
 
-        private static ProcesoClarificado _Instancia;
+        private static Mantenimiento _Instancia;
 
-        public static ProcesoClarificado GetInstancia()
+        public static Mantenimiento GetInstancia()
         {
             if (_Instancia == null)
             {
-                _Instancia = new ProcesoClarificado();
+                _Instancia = new Mantenimiento();
             }
             return _Instancia;
         }
 
 
 
-        public ProcesoClarificado()
+        public Mantenimiento()
         {
             InitializeComponent();
         }
 
-        private void BuscarFolio()
+        private void BuscarDescripcion()
         {
-            this.dataListado.DataSource = NProcesoClarificado.BuscarFolio(this.txtBuscar.Text);
+            this.dataListado.DataSource = NProcesoMantenimiento.BuscarDescripcion(this.txtBuscar.Text);
             this.OcultarColumnas();
             lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListado.Rows.Count);
         }
 
         private void BuscarEmpleado()
         {
-            this.dataListado.DataSource = NProcesoClarificado.BuscarEmpleado(this.txtBuscar.Text);
+            this.dataListado.DataSource = NProcesoMantenimiento.BuscarEmpleado(this.txtBuscar.Text);
             this.OcultarColumnas();
             lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListado.Rows.Count);
         }
-       
+
         private void Limpiar()
         {
-            this.txtFolioClarificado.Text = string.Empty;
-            this.txtCantidad.Text = string.Empty;
-            this.txtLecturaAnterior.Text = string.Empty;
+            this.txtDescripcion.Text = string.Empty;
+            this.Fecha.Text = string.Empty;
             this.txtIdEmpleado.Text = string.Empty;
-            this.txtIdClarificado.Text = string.Empty;
+            this.txtIdMantenimiento.Text = string.Empty;
 
 
         }
-        //Habilita los controles de los formularios
+      
         private void Habilitar(bool Valor)
         {
-            this.txtIdClarificado.ReadOnly = !Valor;
-            this.txtCantidad.ReadOnly = !Valor;
-            this.txtLecturaAnterior.ReadOnly = !Valor;
+            this.txtDescripcion.ReadOnly = !Valor;
+         
 
         }
-        //Habilita los botones
+     
         private void Botones()
         {
             if (this.IsNuevo || this.IsEditar)
@@ -91,19 +88,22 @@ namespace Capa_Presentacion
             }
         }
 
-        //Método Mostrar
+     
         private void Mostrar()
         {
-            this.dataListado.DataSource = NProcesoClarificado.Mostrar();
+            this.dataListado.DataSource = NProcesoMantenimiento.Mostrar();
 
             this.OcultarColumnas();
             lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListado.Rows.Count);
         }
         private void OcultarColumnas()
         {
-            //  this.dataListado.Columns[0].Visible = false;
+         
             this.dataListado.Columns[1].Visible = false;
-            this.dataListado.Columns[6].Visible = false;
+            this.dataListado.Columns[4].Visible = false;
+            this.dataListado.Columns[8].Visible = false;
+            this.dataListado.Columns[10].Visible = false;
+
 
         }
 
@@ -120,23 +120,7 @@ namespace Capa_Presentacion
         }
 
 
-
-        private void label10_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnNuevo_Click(object sender, EventArgs e)
-        {
-            this.IsNuevo = true;
-            this.IsEditar = false;
-            this.Botones();
-            this.Limpiar();
-            this.Habilitar(true);
-            this.txtFolioClarificado.Focus();
-        }
-
-        private void ProcesoClarificado_Load(object sender, EventArgs e)
+        private void Mantenimiento_Load(object sender, EventArgs e)
         {
             this.Top = 0;
             this.Left = 0;
@@ -146,20 +130,27 @@ namespace Capa_Presentacion
             this.Botones();
         }
 
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            this.IsNuevo = true;
+            this.IsEditar = false;
+            this.Botones();
+            this.Limpiar();
+            this.Habilitar(true);
+            this.txtDescripcion.Focus();
+        }
+
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             try
             {
                 string rpta = "";
-                if (this.txtFolioClarificado.Text == string.Empty ||
-                    this.txtCantidad.Text == string.Empty ||
-                    this.txtLecturaAnterior.Text == string.Empty )
+                if (this.txtDescripcion.Text == string.Empty )
 
                 {
                     MensajeError("Falta ingresar algunos datos, serán remarcados");
-                    errorIcono.SetError(txtFolioClarificado, "Ingrese un Folio");
-                    errorIcono.SetError(txtCantidad, "Ingrese la Cantidad");
-                    errorIcono.SetError(txtLecturaAnterior, "Ingrese la Lectura Anterior");
+                    errorIcono.SetError(txtDescripcion, "Ingrese una Descripción");
+                
 
                 }
                 else
@@ -169,27 +160,23 @@ namespace Capa_Presentacion
 
                     if (this.IsNuevo)
                     {
-                        rpta = NProcesoClarificado.Insertar(
-                            IdEmpleado,
-                            txtLecturaAnterior.Text,
-                            Convert.ToInt32(this.txtCantidad.Text),
+                        rpta = NProcesoMantenimiento.Insertar(
+                            txtDescripcion.Text,
                             dtFecha.Value,
-                            txtFolioClarificado.Text
-                            
+                            IdEmpleado
+  
                              );
 
                     }
                     else
                     {
 
-                        rpta = NProcesoClarificado.Editar(
-
-                                                   Convert.ToInt32(this.txtIdClarificado.Text),
-                                                   IdEmpleado,
-                                                   txtLecturaAnterior.Text,
-                            Convert.ToInt32(this.txtCantidad.Text),
-                            dtFecha.Value,
-                            txtFolioClarificado.Text
+                        rpta = NProcesoMantenimiento.Editar(
+                                                   Convert.ToInt32(this.txtIdMantenimiento.Text),
+                                                   txtDescripcion.Text,
+                                                    dtFecha.Value,
+                                                   IdEmpleado
+                                                
                                                    );
                     }
 
@@ -227,8 +214,7 @@ namespace Capa_Presentacion
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-
-            if (!this.txtFolioClarificado.Text.Equals(""))
+            if (!this.txtDescripcion.Text.Equals(""))
             {
                 this.IsEditar = true;
                 this.Botones();
@@ -241,7 +227,6 @@ namespace Capa_Presentacion
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-
             this.IsNuevo = false;
             this.Botones();
             this.Limpiar();
@@ -272,19 +257,6 @@ namespace Capa_Presentacion
             }
         }
 
-        private void dataListado_DoubleClick(object sender, EventArgs e)
-        {
-
-            this.txtIdClarificado.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["Id Clarificado"].Value);
-            this.txtFolioClarificado.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["Folio Clarificado"].Value);
-            this.txtCantidad.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["Cantidad"].Value);
-            this.txtLecturaAnterior.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["Lectura Anterior"].Value);
-            this.dtFecha.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["Fecha"].Value);
-            this.txtIdEmpleado.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["Id Empleado"].Value);
-
-            this.tabControl1.SelectedIndex = 1;
-        }
-
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             try
@@ -302,7 +274,7 @@ namespace Capa_Presentacion
                         if (Convert.ToBoolean(row.Cells[0].Value))
                         {
                             Codigo = Convert.ToString(row.Cells[1].Value);
-                            Rpta = NProcesoClarificado.Eliminar(Convert.ToInt32(Codigo));
+                            Rpta = NProcesoMantenimiento.Eliminar(Convert.ToInt32(Codigo));
 
                             if (Rpta.Equals("OK"))
                             {
@@ -324,27 +296,28 @@ namespace Capa_Presentacion
             }
         }
 
+        private void dataListado_DoubleClick(object sender, EventArgs e)
+        {
+
+            this.txtIdMantenimiento.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["Id Mantenimiento"].Value);
+            this.txtDescripcion.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["Descripción"].Value);
+            this.dtFecha.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["Fecha de Mantenimiento"].Value);
+            this.txtIdEmpleado.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["Id Empleado"].Value);
+
+            this.tabControl1.SelectedIndex = 1;
+        }
+
         private void btnBuscar_Click(object sender, EventArgs e)
         {
 
-
-            if(cbBuscar.Text.Equals("Folio"))
+            if (cbBuscar.Text.Equals("Descripción"))
             {
-                this.BuscarFolio();
+                this.BuscarDescripcion();
             }
-            else if(cbBuscar.Text.Equals("Nombre Empleado")) {
+            else if (cbBuscar.Text.Equals("Nombre Empleado"))
+            {
                 this.BuscarEmpleado();
             }
-           
-         }
-
-
-
-
+        }
     }
-
-
 }
-
-
-

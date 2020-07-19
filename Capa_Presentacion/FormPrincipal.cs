@@ -304,5 +304,13 @@ namespace Capa_Presentacion
             frm.Show();
             frm.IdEmpleado = Convert.ToInt32(this.IdEmpleado);
         }
+
+        private void procesoMantenimientoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Mantenimiento frm = Mantenimiento.GetInstancia();
+            frm.MdiParent = this;
+            frm.Show();
+            frm.IdEmpleado = Convert.ToInt32(this.IdEmpleado);
+        }
     }
 }

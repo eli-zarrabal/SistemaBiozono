@@ -49,6 +49,9 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtLecturaAnterior = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtCantidad = new System.Windows.Forms.TextBox();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.txtFolioClarificado = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -56,9 +59,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.ttMensaje = new System.Windows.Forms.ToolTip(this.components);
             this.errorIcono = new System.Windows.Forms.ErrorProvider(this.components);
-            this.txtCantidad = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtLecturaAnterior = new System.Windows.Forms.TextBox();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataListado)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -317,6 +317,35 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Proceso de Clarificado";
             // 
+            // txtLecturaAnterior
+            // 
+            this.txtLecturaAnterior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.txtLecturaAnterior.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtLecturaAnterior.Location = new System.Drawing.Point(147, 134);
+            this.txtLecturaAnterior.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtLecturaAnterior.Name = "txtLecturaAnterior";
+            this.txtLecturaAnterior.Size = new System.Drawing.Size(153, 22);
+            this.txtLecturaAnterior.TabIndex = 31;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(12, 139);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(110, 17);
+            this.label2.TabIndex = 30;
+            this.label2.Text = "Lectura Anterior";
+            // 
+            // txtCantidad
+            // 
+            this.txtCantidad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.txtCantidad.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtCantidad.Location = new System.Drawing.Point(147, 177);
+            this.txtCantidad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtCantidad.Name = "txtCantidad";
+            this.txtCantidad.Size = new System.Drawing.Size(153, 22);
+            this.txtCantidad.TabIndex = 28;
+            // 
             // btnNuevo
             // 
             this.btnNuevo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -375,35 +404,6 @@
             // errorIcono
             // 
             this.errorIcono.ContainerControl = this;
-            // 
-            // txtCantidad
-            // 
-            this.txtCantidad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.txtCantidad.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtCantidad.Location = new System.Drawing.Point(147, 177);
-            this.txtCantidad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtCantidad.Name = "txtCantidad";
-            this.txtCantidad.Size = new System.Drawing.Size(153, 22);
-            this.txtCantidad.TabIndex = 28;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 139);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(110, 17);
-            this.label2.TabIndex = 30;
-            this.label2.Text = "Lectura Anterior";
-            // 
-            // txtLecturaAnterior
-            // 
-            this.txtLecturaAnterior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.txtLecturaAnterior.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtLecturaAnterior.Location = new System.Drawing.Point(147, 134);
-            this.txtLecturaAnterior.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtLecturaAnterior.Name = "txtLecturaAnterior";
-            this.txtLecturaAnterior.Size = new System.Drawing.Size(153, 22);
-            this.txtLecturaAnterior.TabIndex = 31;
             // 
             // ProcesoClarificado
             // 

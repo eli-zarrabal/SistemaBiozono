@@ -71,19 +71,7 @@ namespace Capa_Negocio
             Obj.TextoBuscar = textobuscar;
             return Obj.BuscarEmpleado(Obj);
         }
-        //public static DataTable BuscarCantidad(string textobuscar)
-        //{
-        //    dProcesoClarificado Obj = new dProcesoClarificado();
-        //    Obj.TextoBuscar = textobuscar;
-        //    return Obj.BuscarCantidad(Obj);
-        //}
-        //public static DataTable BuscarLecturaAnterior(string textobuscar)
-        //{
-        //    dProcesoClarificado Obj = new dProcesoClarificado();
-        //    Obj.TextoBuscar = textobuscar;
-        //    return Obj.BuscarLecturaAnterior(Obj);
-        //}
-
+      
 
     }
 }

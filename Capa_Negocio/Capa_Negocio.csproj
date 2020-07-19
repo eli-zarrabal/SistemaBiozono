@@ -46,6 +46,7 @@
     <Compile Include="NEmpleado.cs" />
     <Compile Include="NIngreso.cs" />
     <Compile Include="NProcesoClarificado.cs" />
+    <Compile Include="NProcesoMantenimiento.cs" />
     <Compile Include="NProcesoPurificado.cs" />
     <Compile Include="NProducto.cs" />
     <Compile Include="NRol.cs" />

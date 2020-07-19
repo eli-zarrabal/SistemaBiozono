@@ -7,92 +7,74 @@ using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
 using System.Globalization;
+using System.Security.Cryptography;
 
 namespace Capa_Datos
 {
-    public class dProcesoClarificado
+    public class dProcesoMantenimiento
     {
-        //Variables
-
-        private int _IdClarificado;
+       
+        private int _IdMantenimiento;
         private int _IdEmpleado;
-        private string _LecturaAnterior;
-        private int _Cantidad;
+        private string _Descripcion;
         private DateTime _Fecha;
-        private string _FolioClarificado;
         private string _TextoBuscar;
 
 
-        public int IdClarificado
+        public int IdMantenimiento
         {
-            get { return _IdClarificado; }
-            set { _IdClarificado = value; }
+            get { return _IdMantenimiento; }
+            set { _IdMantenimiento = value; }
         }
         public int IdEmpleado
         {
             get { return _IdEmpleado; }
             set { _IdEmpleado = value; }
         }
-       
-        
-        public string LecturaAnterior
-        {
-            get { return _LecturaAnterior; }
-            set { _LecturaAnterior = value; }
-        }
-        public int Cantidad
-        {
-            get { return _Cantidad; }
-            set { _Cantidad = value; }
-        }
 
+
+        public string Descripcion
+        {
+            get { return _Descripcion; }
+            set { _Descripcion = value; }
+        }
+       
         public DateTime Fecha
         {
             get { return _Fecha; }
             set { _Fecha = value; }
         }
-        public string FolioClarificado
-        {
-            get { return _FolioClarificado; }
-            set { _FolioClarificado = value; }
-        }
+       
         public string TextoBuscar
         {
             get { return _TextoBuscar; }
             set { _TextoBuscar = value; }
         }
 
-        
 
-
-        //Constructores
-        public dProcesoClarificado()
+        public dProcesoMantenimiento()
         {
 
         }
 
-        public dProcesoClarificado(
-            int idclarificado,
+        public dProcesoMantenimiento(
+            int idmantenimiento,
             int idempleado,
-            string lecturaanterior,
-            int cantidad,
+            string descripcion,
             DateTime fecha,
-            string folioclarificado,
             string textobuscar)
         {
-          
+
+            
             this.IdEmpleado = idempleado;
-            this.LecturaAnterior = lecturaanterior;
-            this.Cantidad = cantidad;
+            this.Descripcion = descripcion;
             this.Fecha = fecha;
-            this.FolioClarificado = folioclarificado;
             this.TextoBuscar = textobuscar;
 
         }
 
-        //Métodos
-        //Insertar
-        public string Insertar(dProcesoClarificado Clarificado)
+       
+        public string Insertar(dProcesoMantenimiento Mantenimiento)
         {
             string rpta = "";
             SqlConnection SqlCon = new SqlConnection();
@@ -104,43 +86,28 @@ namespace Capa_Datos
                 //Establecer el Comando
                 SqlCommand SqlCmd = new SqlCommand();
                 SqlCmd.Connection = SqlCon;
-                SqlCmd.CommandText = "p_insertar_proceso_clarificado";
+                SqlCmd.CommandText = "p_insertar_proceso_mantenimiento";
                 SqlCmd.CommandType = CommandType.StoredProcedure;
 
+                SqlParameter ParDescripcion = new SqlParameter();
+                ParDescripcion.ParameterName = "@Descripcion";
+                ParDescripcion.SqlDbType = SqlDbType.VarChar;
+                ParDescripcion.Size = 300;
+                ParDescripcion.Value = Mantenimiento.Descripcion;
+                SqlCmd.Parameters.Add(ParDescripcion);
+
+                SqlParameter ParFecha = new SqlParameter();
+                ParFecha.ParameterName = "@Fecha";
+                ParFecha.SqlDbType = SqlDbType.Date;
+                ParFecha.Value = Mantenimiento.Fecha;
+                SqlCmd.Parameters.Add(ParFecha);
 
                 SqlParameter ParIdEmpleado = new SqlParameter();
                 ParIdEmpleado.ParameterName = "@Id_Empleado";
                 ParIdEmpleado.SqlDbType = SqlDbType.VarChar;
                 ParIdEmpleado.SqlDbType = SqlDbType.VarChar;
-                ParIdEmpleado.Value = Clarificado.IdEmpleado;
+                ParIdEmpleado.Value = Mantenimiento.IdEmpleado;
                 SqlCmd.Parameters.Add(ParIdEmpleado);
-
-                SqlParameter ParLecturaAnterior = new SqlParameter();
-                ParLecturaAnterior.ParameterName = "@Lectura_Anterior";
-                ParLecturaAnterior.SqlDbType = SqlDbType.VarChar;
-                ParLecturaAnterior.Size = 20;
-                ParLecturaAnterior.Value = Clarificado.LecturaAnterior;
-                SqlCmd.Parameters.Add(ParLecturaAnterior);
-
-                SqlParameter ParCantidad = new SqlParameter();
-                ParCantidad.ParameterName = "@Cantidad";
-                ParCantidad.SqlDbType = SqlDbType.VarChar;
-                ParCantidad.SqlDbType = SqlDbType.VarChar;
-                ParCantidad.Value = Clarificado.Cantidad;
-                SqlCmd.Parameters.Add(ParCantidad);
-
-                SqlParameter ParFecha = new SqlParameter();
-                ParFecha.ParameterName = "@Fecha";
-                ParFecha.SqlDbType = SqlDbType.Date;
-                ParFecha.Value = Clarificado.Fecha;
-                SqlCmd.Parameters.Add(ParFecha);
-
-                SqlParameter ParFolio = new SqlParameter();
-                ParFolio.ParameterName = "@Folio_Clarificado";
-                ParFolio.SqlDbType = SqlDbType.VarChar;
-                ParFolio.Size = 20;
-                ParFolio.Value = Clarificado.FolioClarificado;
-                SqlCmd.Parameters.Add(ParFolio);
 
 
 
@@ -163,19 +130,16 @@ namespace Capa_Datos
 
         }
 
-
-
-        //Método Mostrar
         public DataTable Mostrar()
         {
-            DataTable DtResultado = new DataTable("clarificado");
+            DataTable DtResultado = new DataTable("mantenimiento");
             SqlConnection SqlCon = new SqlConnection();
             try
             {
                 SqlCon.ConnectionString = Conexion.Cn;
                 SqlCommand SqlCmd = new SqlCommand();
                 SqlCmd.Connection = SqlCon;
-                SqlCmd.CommandText = "p_mostrar_proceso_clarificado";
+                SqlCmd.CommandText = "p_mostrar_proceso_mantenimiento";
                 SqlCmd.CommandType = CommandType.StoredProcedure;
 
                 SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
@@ -190,23 +154,24 @@ namespace Capa_Datos
 
         }
 
-        public DataTable BuscarFolio(dProcesoClarificado Clarificado)
+
+        public DataTable BuscarDescripcion(dProcesoMantenimiento Mantenimiento)
         {
-            DataTable DtResultado = new DataTable("clarificado");
+            DataTable DtResultado = new DataTable("mantenimiento");
             SqlConnection SqlCon = new SqlConnection();
             try
             {
                 SqlCon.ConnectionString = Conexion.Cn;
                 SqlCommand SqlCmd = new SqlCommand();
                 SqlCmd.Connection = SqlCon;
-                SqlCmd.CommandText = "p_buscar_proceso_clarificado_folio";
+                SqlCmd.CommandText = "p_buscar_proceso_mantenimiento_descripcion";
                 SqlCmd.CommandType = CommandType.StoredProcedure;
 
                 SqlParameter ParTextoBuscar = new SqlParameter();
                 ParTextoBuscar.ParameterName = "@textobuscar";
                 ParTextoBuscar.SqlDbType = SqlDbType.VarChar;
-                ParTextoBuscar.Size = 50;
-                ParTextoBuscar.Value = Clarificado.TextoBuscar;
+                ParTextoBuscar.Size = 300;
+                ParTextoBuscar.Value = Mantenimiento.TextoBuscar;
                 SqlCmd.Parameters.Add(ParTextoBuscar);
 
                 SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
@@ -221,23 +186,23 @@ namespace Capa_Datos
 
         }
 
-        public DataTable BuscarEmpleado(dProcesoClarificado Clarificado)
+        public DataTable BuscarEmpleado(dProcesoMantenimiento Mantenimiento)
         {
-            DataTable DtResultado = new DataTable("clarificado");
+            DataTable DtResultado = new DataTable("mantenimiento");
             SqlConnection SqlCon = new SqlConnection();
             try
             {
                 SqlCon.ConnectionString = Conexion.Cn;
                 SqlCommand SqlCmd = new SqlCommand();
                 SqlCmd.Connection = SqlCon;
-                SqlCmd.CommandText = "p_buscar_proceso_clarificado_nombre_empleado";
+                SqlCmd.CommandText = "p_buscar_proceso_mantenimiento_empleado";
                 SqlCmd.CommandType = CommandType.StoredProcedure;
 
                 SqlParameter ParTextoBuscar = new SqlParameter();
                 ParTextoBuscar.ParameterName = "@textobuscar";
                 ParTextoBuscar.SqlDbType = SqlDbType.VarChar;
-                ParTextoBuscar.Size = 50;
-                ParTextoBuscar.Value = Clarificado.TextoBuscar;
+                ParTextoBuscar.Size = 300;
+                ParTextoBuscar.Value = Mantenimiento.TextoBuscar;
                 SqlCmd.Parameters.Add(ParTextoBuscar);
 
                 SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
@@ -251,9 +216,9 @@ namespace Capa_Datos
             return DtResultado;
 
         }
-      
-        //Método Editar
-        public string Editar(dProcesoClarificado Clarificado)
+
+
+        public string Editar(dProcesoMantenimiento Mantenimiento)
         {
             string rpta = "";
             SqlConnection SqlCon = new SqlConnection();
@@ -265,54 +230,36 @@ namespace Capa_Datos
                 //Establecer el Comando
                 SqlCommand SqlCmd = new SqlCommand();
                 SqlCmd.Connection = SqlCon;
-                SqlCmd.CommandText = "p_editar_proceso_clarificado";
+                SqlCmd.CommandText = "p_editar_proceso_mantenimiento";
                 SqlCmd.CommandType = CommandType.StoredProcedure;
 
 
 
-                SqlParameter ParIdClarificado = new SqlParameter();
-                ParIdClarificado.ParameterName = "@Id_Clarificado";
-                ParIdClarificado.SqlDbType = SqlDbType.Int;
-                ParIdClarificado.Value = Clarificado.IdClarificado;
-                SqlCmd.Parameters.Add(ParIdClarificado);
+                SqlParameter ParIdMantenimiento = new SqlParameter();
+                ParIdMantenimiento.ParameterName = "@Id_Mantenimiento";
+                ParIdMantenimiento.SqlDbType = SqlDbType.Int;
+                ParIdMantenimiento.Value = Mantenimiento.IdMantenimiento;
+                SqlCmd.Parameters.Add(ParIdMantenimiento);
 
+                SqlParameter ParDescripcion = new SqlParameter();
+                ParDescripcion.ParameterName = "@Descripcion";
+                ParDescripcion.SqlDbType = SqlDbType.VarChar;
+                ParDescripcion.Size = 300;
+                ParDescripcion.Value = Mantenimiento.Descripcion;
+                SqlCmd.Parameters.Add(ParDescripcion);
 
+                SqlParameter ParFecha = new SqlParameter();
+                ParFecha.ParameterName = "@Fecha";
+                ParFecha.SqlDbType = SqlDbType.Date;
+                ParFecha.Value = Mantenimiento.Fecha;
+                SqlCmd.Parameters.Add(ParFecha);
 
                 SqlParameter ParIdEmpleado = new SqlParameter();
                 ParIdEmpleado.ParameterName = "@Id_Empleado";
                 ParIdEmpleado.SqlDbType = SqlDbType.VarChar;
                 ParIdEmpleado.SqlDbType = SqlDbType.VarChar;
-                ParIdEmpleado.Value = Clarificado.IdEmpleado;
+                ParIdEmpleado.Value = Mantenimiento.IdEmpleado;
                 SqlCmd.Parameters.Add(ParIdEmpleado);
-
-                SqlParameter ParLecturaAnterior = new SqlParameter();
-                ParLecturaAnterior.ParameterName = "@Lectura_Anterior";
-                ParLecturaAnterior.SqlDbType = SqlDbType.VarChar;
-                ParLecturaAnterior.Size = 20;
-                ParLecturaAnterior.Value = Clarificado.LecturaAnterior;
-                SqlCmd.Parameters.Add(ParLecturaAnterior);
-
-                SqlParameter ParCantidad = new SqlParameter();
-                ParCantidad.ParameterName = "@Cantidad";
-                ParCantidad.SqlDbType = SqlDbType.VarChar;
-                ParCantidad.SqlDbType = SqlDbType.VarChar;
-                ParCantidad.Value = Clarificado.Cantidad;
-                SqlCmd.Parameters.Add(ParCantidad);
-
-
-                SqlParameter ParFecha = new SqlParameter();
-                ParFecha.ParameterName = "@Fecha";
-                ParFecha.SqlDbType = SqlDbType.Date;
-                ParFecha.Value = Clarificado.Fecha;
-                SqlCmd.Parameters.Add(ParFecha);
-
-                SqlParameter ParFolio = new SqlParameter();
-                ParFolio.ParameterName = "@Folio_Clarificado";
-                ParFolio.SqlDbType = SqlDbType.VarChar;
-                ParFolio.Size = 20;
-                ParFolio.Value = Clarificado.FolioClarificado;
-                SqlCmd.Parameters.Add(ParFolio);
-
 
 
                 //Ejecutamos nuestro comando
@@ -333,7 +280,7 @@ namespace Capa_Datos
         }
 
 
-        public string Eliminar(dProcesoClarificado Clarificado)
+        public string Eliminar(dProcesoMantenimiento Mantenimiento)
         {
             string rpta = "";
             SqlConnection SqlCon = new SqlConnection();
@@ -345,14 +292,14 @@ namespace Capa_Datos
                 //Establecer el Comando
                 SqlCommand SqlCmd = new SqlCommand();
                 SqlCmd.Connection = SqlCon;
-                SqlCmd.CommandText = "p_eliminar_proceso_clarificado";
+                SqlCmd.CommandText = "p_eliminar_proceso_mantenimiento";
                 SqlCmd.CommandType = CommandType.StoredProcedure;
 
-                SqlParameter ParIdClarificado = new SqlParameter();
-                ParIdClarificado.ParameterName = "@Id_Clarificado";
-                ParIdClarificado.SqlDbType = SqlDbType.Int;
-                ParIdClarificado.Value = Clarificado.IdClarificado;
-                SqlCmd.Parameters.Add(ParIdClarificado);
+                SqlParameter ParIdMantenimiento = new SqlParameter();
+                ParIdMantenimiento.ParameterName = "@Id_Mantenimiento";
+                ParIdMantenimiento.SqlDbType = SqlDbType.Int;
+                ParIdMantenimiento.Value = Mantenimiento.IdMantenimiento;
+                SqlCmd.Parameters.Add(ParIdMantenimiento);
 
 
                 //Ejecutamos nuestro comando
