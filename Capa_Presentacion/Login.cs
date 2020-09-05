@@ -40,6 +40,11 @@ namespace Capa_Presentacion
 
         }
 
+        private void Login_Load(object sender, EventArgs e)
+        {
+            LblHora.Text = DateTime.Now.ToLongDateString();
+        }
+
         //private void BtnIngresar_Click(object sender, EventArgs e)
         //{
 

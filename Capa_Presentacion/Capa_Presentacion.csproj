@@ -208,6 +208,7 @@
   <ItemGroup>
     <Content Include="obj\Debug\Capa_Presentacion.csproj.FileListAbsolute.txt" />
     <Content Include="obj\Debug\TempPE\Properties.Resources.Designer.cs.dll" />
+    <None Include="Resources\img_login.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\Debug\" />
