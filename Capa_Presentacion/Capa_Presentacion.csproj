@@ -105,6 +105,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Sistema_Ventas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sistema_Ventas.Designer.cs">
+      <DependentUpon>Sistema_Ventas.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControl1.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -185,6 +191,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Sistema_Ventas.resx">
+      <DependentUpon>Sistema_Ventas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ventas.resx">
       <DependentUpon>Ventas.cs</DependentUpon>
     </EmbeddedResource>
@@ -208,6 +217,16 @@
   <ItemGroup>
     <Content Include="obj\Debug\Capa_Presentacion.csproj.FileListAbsolute.txt" />
     <Content Include="obj\Debug\TempPE\Properties.Resources.Designer.cs.dll" />
+    <None Include="Resources\res.png" />
+    <None Include="Resources\minimazar.png" />
+    <None Include="Resources\maxi.png" />
+    <None Include="Resources\cerrar.png" />
+    <None Include="Resources\IcoBio.png" />
+    <None Include="Resources\empleados-0.png" />
+    <None Include="Resources\clientes-0.png" />
+    <None Include="Resources\venta-0.png" />
+    <None Include="Resources\producto-0.png" />
+    <None Include="Resources\Mobile-Menu-Icon.png" />
     <None Include="Resources\img_login.jpg" />
   </ItemGroup>
   <ItemGroup>

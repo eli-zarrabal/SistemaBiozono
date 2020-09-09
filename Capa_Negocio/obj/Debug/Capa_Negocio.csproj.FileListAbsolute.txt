@@ -39,3 +39,13 @@ C:\Sistema Biozono\Capa_Negocio\obj\Debug\Capa_Negocio.csproj.CoreCompileInputs.
 C:\Sistema Biozono\Capa_Negocio\obj\Debug\Capa_Negocio.csproj.CopyComplete
 C:\Sistema Biozono\Capa_Negocio\obj\Debug\Capa_Negocio.dll
 C:\Sistema Biozono\Capa_Negocio\obj\Debug\Capa_Negocio.pdb
+C:\Sistema Biozono\SistemaBiozono\Capa_Negocio\bin\Debug\Capa_Negocio.dll
+C:\Sistema Biozono\SistemaBiozono\Capa_Negocio\bin\Debug\Capa_Negocio.pdb
+C:\Sistema Biozono\SistemaBiozono\Capa_Negocio\bin\Debug\Capa_Datos.dll
+C:\Sistema Biozono\SistemaBiozono\Capa_Negocio\bin\Debug\Capa_Datos.pdb
+C:\Sistema Biozono\SistemaBiozono\Capa_Negocio\bin\Debug\Capa_Datos.dll.config
+C:\Sistema Biozono\SistemaBiozono\Capa_Negocio\obj\Debug\Capa_Negocio.csprojAssemblyReference.cache
+C:\Sistema Biozono\SistemaBiozono\Capa_Negocio\obj\Debug\Capa_Negocio.csproj.CoreCompileInputs.cache
+C:\Sistema Biozono\SistemaBiozono\Capa_Negocio\obj\Debug\Capa_Negocio.csproj.CopyComplete
+C:\Sistema Biozono\SistemaBiozono\Capa_Negocio\obj\Debug\Capa_Negocio.dll
+C:\Sistema Biozono\SistemaBiozono\Capa_Negocio\obj\Debug\Capa_Negocio.pdb
