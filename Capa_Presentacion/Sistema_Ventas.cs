@@ -31,7 +31,7 @@ namespace Capa_Presentacion
 
         private void btnMaximizar_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Maximized;
+           this.WindowState = FormWindowState.Maximized;
             btnMin.Visible = true;
             btnMaximizar.Visible = false;
         }
@@ -59,10 +59,45 @@ namespace Capa_Presentacion
                 MenuVertical.Width = 250;
         }
 
+        // En esta parte esta el Codigo para poder mover la ventana seleccionando la barra de titulo.
         private void BarraTitulo_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+
+        // Aqui creamos el metodo donde hacemos el llamado del formulario hijo.
+        private void AbrirFormEnPanel(object Formhijo)
+        {
+            if (this.PanelContenedor.Controls.Count > 0)
+                this.PanelContenedor.Controls.RemoveAt(0);
+            Form fh = Formhijo as Form;
+            fh.TopLevel = false;
+            fh.Dock = DockStyle.Fill;
+            this.PanelContenedor.Controls.Add(fh);
+            this.PanelContenedor.Tag = fh;
+            fh.Show();
+        }
+        // con este boton invocamos el metodo 
+        private void btnProductos_Click(object sender, EventArgs e)
+        {
+            AbrirFormEnPanel(new Producto());
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            AbrirFormEnPanel(new InicioResumen());
+        }
+
+        private void Sistema_Ventas_Load(Object sender, EventArgs e)
+        {
+           
+        }
+
+        private void Sistema_Ventas_Load_1(object sender, EventArgs e)
+        {
+            pictureBox1_Click(null, e);
         }
     }
 }

@@ -43,6 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="InicioResumen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InicioResumen.Designer.cs">
+      <DependentUpon>InicioResumen.cs</DependentUpon>
+    </Compile>
     <Compile Include="Mantenimiento.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -153,6 +159,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="InicioResumen.resx">
+      <DependentUpon>InicioResumen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Mantenimiento.resx">
       <DependentUpon>Mantenimiento.cs</DependentUpon>
     </EmbeddedResource>
@@ -217,6 +226,13 @@
   <ItemGroup>
     <Content Include="obj\Debug\Capa_Presentacion.csproj.FileListAbsolute.txt" />
     <Content Include="obj\Debug\TempPE\Properties.Resources.Designer.cs.dll" />
+    <None Include="Resources\Inventario.png" />
+    <None Include="Resources\pagos02.png" />
+    <None Include="Resources\ventas04.png" />
+    <None Include="Resources\prodcutos03.png" />
+    <None Include="Resources\empleados01.png" />
+    <None Include="Resources\reportes.png" />
+    <None Include="Resources\boss_man-128.png" />
     <None Include="Resources\res.png" />
     <None Include="Resources\minimazar.png" />
     <None Include="Resources\maxi.png" />

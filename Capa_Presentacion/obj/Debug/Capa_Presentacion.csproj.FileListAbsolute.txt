@@ -124,3 +124,4 @@ C:\Sistema Biozono\SistemaBiozono\Capa_Presentacion\obj\Debug\Capa_Presentacion.
 C:\Sistema Biozono\SistemaBiozono\Capa_Presentacion\obj\Debug\Capa_Presentacion.csproj.CopyComplete
 C:\Sistema Biozono\SistemaBiozono\Capa_Presentacion\obj\Debug\Capa_Presentacion.dll
 C:\Sistema Biozono\SistemaBiozono\Capa_Presentacion\obj\Debug\Capa_Presentacion.pdb
+C:\Sistema Biozono\SistemaBiozono\Capa_Presentacion\obj\Debug\Capa_Presentacion.InicioResumen.resources
