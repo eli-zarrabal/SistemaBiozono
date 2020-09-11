@@ -157,13 +157,13 @@ namespace Capa_Presentacion
         }
 
         //Método BuscarFechas
-        private void BuscarFechas()
-        {
-            this.dataListado.DataSource = NVenta.BuscarFechas(this.dtFecha1.Value.ToString("dd/MM/yyyy"),
-                this.dtFecha2.Value.ToString("dd/MM/yyyy"));
-            this.OcultarColumnas();
-            lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListado.Rows.Count);
-        }
+        //private void BuscarFechas()
+        //{
+        //    this.dataListado.DataSource = NVenta.BuscarFechas(this.dtFecha1.Value.ToString("dd/MM/yyyy"),
+        //        this.dtFecha2.Value.ToString("dd/MM/yyyy"));
+        //    this.OcultarColumnas();
+        //    lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListado.Rows.Count);
+        //}
 
         private void MostrarDetalle()
         {
@@ -210,10 +210,10 @@ namespace Capa_Presentacion
             vista.ShowDialog();
         }
 
-        private void btnBuscar_Click(object sender, EventArgs e)
-        {
-            this.BuscarFechas();
-        }
+        //private void btnBuscar_Click(object sender, EventArgs e)
+        //{
+        //    this.BuscarFechas();
+        //}
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
@@ -385,7 +385,9 @@ namespace Capa_Presentacion
                     }
                     if (registrar && Convert.ToInt32(txtCantidad.Text) <= Convert.ToInt32(txtStock_Actual.Text))
                     {
-                        decimal subTotal = Convert.ToDecimal(this.txtCantidad.Text) * Convert.ToDecimal(this.txtPrecio_Venta.Text);
+                        decimal subTotal = 
+                        Convert.ToDecimal(this.txtCantidad.Text) * 
+                        Convert.ToDecimal(this.txtPrecio_Venta.Text);
                         totalPagado = totalPagado + subTotal;
                         this.lblTotal_Pagado.Text = totalPagado.ToString("#0.00#");
                         //Agregar ese detalle al datalistadoDetalle
@@ -394,8 +396,7 @@ namespace Capa_Presentacion
                         row["Producto"] = this.txtArticulo.Text;
                         row["Cantidad"] = Convert.ToInt32(this.txtCantidad.Text);
                         row["Precio_Venta"] = Convert.ToDecimal(this.txtPrecio_Venta.Text);
-                       
-                        row["subtotal"] = subTotal;
+                        row["SubTotal"] = subTotal;
                         this.dtDetalle.Rows.Add(row);
                         this.limpiarDetalle();
 
@@ -423,7 +424,7 @@ namespace Capa_Presentacion
                 int indiceFila = this.dataListadoDetalle.CurrentCell.RowIndex;
                 DataRow row = this.dtDetalle.Rows[indiceFila];
                 //Disminuir el totalPAgado
-                this.totalPagado = this.totalPagado - Convert.ToDecimal(row["subtotal"].ToString());
+                this.totalPagado = this.totalPagado - Convert.ToDecimal(row["SubTotal"].ToString());
                 this.lblTotal_Pagado.Text = totalPagado.ToString("#0.00#");
                 //Removemos la fila
                 this.dtDetalle.Rows.Remove(row);

@@ -87,7 +87,8 @@ namespace Capa_Datos
 
                 //Ejecutamos nuestro comando
 
-                rpta = SqlCmd.ExecuteNonQuery() == 1 ? "OK" : "No se Actualizó el stock";
+                rpta = SqlCmd.ExecuteNonQuery() == 1 ? "OK" :  "No se Actualizó el stock";
+                
 
 
             }

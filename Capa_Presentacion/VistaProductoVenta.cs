@@ -24,7 +24,7 @@ namespace Capa_Presentacion
             this.dataListado.Columns[1].Visible = false;
         }
 
-      
+
         private void MostrarProducto_Venta_Nombre()
         {
             this.dataListado.DataSource = NVenta.MostrarProducto_Venta_Nombre(this.txtBuscar.Text);

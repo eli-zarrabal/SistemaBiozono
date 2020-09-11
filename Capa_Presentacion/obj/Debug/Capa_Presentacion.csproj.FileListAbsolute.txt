@@ -69,3 +69,4 @@ C:\ProyectosElizabeth\Sistema_Biozono\Capa_Presentacion\obj\Debug\Capa_Presentac
 C:\ProyectosElizabeth\Sistema_Biozono\Capa_Presentacion\obj\Debug\Capa_Presentacion.dll
 C:\ProyectosElizabeth\Sistema_Biozono\Capa_Presentacion\obj\Debug\Capa_Presentacion.pdb
 C:\ProyectosElizabeth\Sistema_Biozono\Capa_Presentacion\obj\Debug\Capa_Presentacion.Mantenimiento.resources
+C:\ProyectosElizabeth\Sistema_Biozono\Capa_Presentacion\obj\Debug\Capa_Presentacion.MenuPrincipal.resources

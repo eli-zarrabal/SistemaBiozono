@@ -50,11 +50,11 @@ namespace Capa_Negocio
         //Método BuscarFecha que llama al método BuscarFecha
         //de la clase DVenta de la CapaDatos
 
-        public static DataTable BuscarFechas(string textobuscar, string textobuscar2)
-        {
-            dVenta Obj = new dVenta();
-            return Obj.BuscarFechas(textobuscar, textobuscar2);
-        }
+        //public static DataTable BuscarFechas(string textobuscar, string textobuscar2)
+        //{
+        //    dVenta Obj = new dVenta();
+        //    return Obj.BuscarFechas(textobuscar, textobuscar2);
+        //}
 
         public static DataTable MostrarDetalle(string textobuscar)
         {
@@ -66,7 +66,7 @@ namespace Capa_Negocio
             dVenta Obj = new dVenta();
             return Obj.MostrarProducto_Venta_Nombre(textobuscar);
         }
-        
+
 
     }
 }
