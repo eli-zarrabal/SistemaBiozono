@@ -16,7 +16,7 @@ namespace Capa_Datos
         private int _Idcliente;
         private int _IdEmpleado;
         private DateTime _Fecha;
-   
+
         public int Idventa
         {
             get { return _Idventa; }
@@ -41,7 +41,7 @@ namespace Capa_Datos
             set { _Fecha = value; }
         }
 
-       
+
         //Constructores 
         public dVenta()
         {
@@ -54,56 +54,12 @@ namespace Capa_Datos
             this.Idcliente = idcliente;
             this.IdEmpleado = idtrabajador;
             this.Fecha = fecha;
-          
+
         }
-        //Métodos
-        public string DisminuirStock(int iddetalle_ingreso, int cantidad)
-        {
-            string rpta = "";
-            SqlConnection SqlCon = new SqlConnection();
-            try
-            {
-                //Código
-                SqlCon.ConnectionString = Conexion.Cn;
-                SqlCon.Open();
-                //Establecer el Comando
-                SqlCommand SqlCmd = new SqlCommand();
-                SqlCmd.Connection = SqlCon;
-                SqlCmd.CommandText = "p_disminuir_stock";
-                SqlCmd.CommandType = CommandType.StoredProcedure;
+      
 
-                SqlParameter ParIddetalle_Ingreso = new SqlParameter();
-                ParIddetalle_Ingreso.ParameterName = "@Id_DetalleIngreso";
-                ParIddetalle_Ingreso.SqlDbType = SqlDbType.Int;
-                ParIddetalle_Ingreso.Value = iddetalle_ingreso;
-                SqlCmd.Parameters.Add(ParIddetalle_Ingreso);
-
-                SqlParameter ParCantidad = new SqlParameter();
-                ParCantidad.ParameterName = "@Cantidad";
-                ParCantidad.SqlDbType = SqlDbType.Int;
-                ParCantidad.Value = cantidad;
-                SqlCmd.Parameters.Add(ParCantidad);
-
-
-                //Ejecutamos nuestro comando
-
-                rpta = SqlCmd.ExecuteNonQuery() == 1 ? "OK" :  "No se Actualizó el stock";
-                
-
-
-            }
-            catch (Exception ex)
-            {
-                rpta = ex.Message;
-            }
-            finally
-            {
-                if (SqlCon.State == ConnectionState.Open) SqlCon.Close();
-            }
-            return rpta;
-        }
-
-        public string Insertar(dVenta Venta, List<dDetalleVenta> Detalle)
+    
+    public string Insertar(dVenta Venta, List<dDetalleVenta> Detalles)
         {
             string rpta = "";
             SqlConnection SqlCon = new SqlConnection();
@@ -145,47 +101,48 @@ namespace Capa_Datos
                 ParFecha.Value = Venta.Fecha;
                 SqlCmd.Parameters.Add(ParFecha);
 
-          
-
 
                 //Ejecutamos nuestro comando
-
                 rpta = SqlCmd.ExecuteNonQuery() == 1 ? "OK" : "No se Ingreso el Registro";
-
                 if (rpta.Equals("OK"))
                 {
-                    //Obtener el código del ingreso generado
+                    //Obtenemos el codigo del ingreso que se genero por la base de datos
+
                     this.Idventa = Convert.ToInt32(SqlCmd.Parameters["@Id_Venta"].Value);
-                    foreach (dDetalleVenta det in Detalle)
+                    foreach (dDetalleVenta det in Detalles)
                     {
+                        //Establecemos el codigo del ingreso que se autogenero
                         det.Idventa = this.Idventa;
-                        //Llamar al método insertar de la clase DDetalle_Ingreso
+                        //Llamamos al metodo insertar de la clase DetalleIngreso
+                        //y le pasamos la conexion y la transaccion que debe de usar
                         rpta = det.Insertar(det, ref SqlCon, ref SqlTra);
                         if (!rpta.Equals("OK"))
                         {
+                            //Si ocurre un error al insertar un detalle de ingreso salimos del for
                             break;
                         }
                         else
                         {
-                            //Actualizamos el stock
-                            rpta = DisminuirStock(det.Iddetalle_ingreso, det.Cantidad);
+                            //Actualizamos el Stock
+
+                            rpta = DisminuirStock(det.Iddetalle_Ingreso, det.Cantidad);
                             if (!rpta.Equals("OK"))
                             {
                                 break;
                             }
                         }
                     }
-
                 }
                 if (rpta.Equals("OK"))
                 {
+                    //Se inserto todo los detalles y confirmamos la transaccion
                     SqlTra.Commit();
                 }
                 else
                 {
+                    //Algun detalle no se inserto y negamos la transaccion
                     SqlTra.Rollback();
                 }
-
 
             }
             catch (Exception ex)
@@ -197,10 +154,10 @@ namespace Capa_Datos
                 if (SqlCon.State == ConnectionState.Open) SqlCon.Close();
             }
             return rpta;
-
         }
-        //Método Eliminar
-        public string Eliminar(dVenta Venta)
+    
+    //Método Eliminar
+    public string Eliminar(dVenta Venta)
         {
             string rpta = "";
             SqlConnection SqlCon = new SqlConnection();
@@ -237,6 +194,51 @@ namespace Capa_Datos
                 if (SqlCon.State == ConnectionState.Open) SqlCon.Close();
             }
             return rpta;
+        }
+
+        //Métodos
+        public string DisminuirStock(int iddetalle_ingreso, int cantidad)
+        {
+
+            string rpta = "";
+            SqlConnection SqlCon = new SqlConnection();
+            try
+            {
+                //Código
+                SqlCon.ConnectionString = Conexion.Cn;
+                SqlCon.Open();
+                //Establecer el Comando
+                SqlCommand SqlCmd = new SqlCommand();
+                SqlCmd.Connection = SqlCon;
+                SqlCmd.CommandText = "p_disminuir_stock";
+                SqlCmd.CommandType = CommandType.StoredProcedure;
+
+                SqlParameter ParIddetalle_ingreso = new SqlParameter();
+                ParIddetalle_ingreso.ParameterName = "@Id_DetalleIngreso";
+                ParIddetalle_ingreso.SqlDbType = SqlDbType.Int;
+                ParIddetalle_ingreso.Value = iddetalle_ingreso;
+                SqlCmd.Parameters.Add(ParIddetalle_ingreso);
+
+                SqlParameter ParCantidad = new SqlParameter();
+                ParCantidad.ParameterName = "@Cantidad";
+                ParCantidad.SqlDbType = SqlDbType.Int;
+                ParCantidad.Value = cantidad;
+                SqlCmd.Parameters.Add(ParCantidad);
+                //Ejecutamos nuestro comando
+
+                rpta = SqlCmd.ExecuteNonQuery() == 1 ? "OK" : "No Se actualizó el Stock";
+
+            }
+            catch (Exception ex)
+            {
+                rpta = ex.Message;
+            }
+            finally
+            {
+                if (SqlCon.State == ConnectionState.Open) SqlCon.Close();
+            }
+            return rpta;
+
         }
 
         //Método Mostrar

@@ -49,17 +49,18 @@ namespace Capa_Presentacion
         private void dataListado_DoubleClick(object sender, EventArgs e)
         {
             Ventas form = Ventas.GetInstancia();
-            string  par1, par2;
+            string par1, par2;
             decimal par3, par4;
-            int par5;
+            int par5, par6;
+            par1 = Convert.ToString(this.dataListado.CurrentRow.Cells["Id_DetalleIngreso"].Value);
             
-           par1 = Convert.ToString(this.dataListado.CurrentRow.Cells["Id_Producto"].Value);
             par2 = Convert.ToString(this.dataListado.CurrentRow.Cells["Nombre"].Value);
             par3 = Convert.ToDecimal(this.dataListado.CurrentRow.Cells["Precio_Compra"].Value);
             par4 = Convert.ToDecimal(this.dataListado.CurrentRow.Cells["Precio_Venta"].Value);
             par5 = Convert.ToInt32(this.dataListado.CurrentRow.Cells["Stock_Actual"].Value);
-            
-            form.setArticulo(par1, par2, par3, par4, par5);
+            par6 = Convert.ToInt32(this.dataListado.CurrentRow.Cells["Id_Producto"].Value);
+
+            form.setArticulo(par1, par2, par3, par4, par5, par6);
             this.Hide();
         }
     }

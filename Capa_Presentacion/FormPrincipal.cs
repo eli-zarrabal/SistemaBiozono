@@ -260,10 +260,10 @@ namespace Capa_Presentacion
 
         private void TsVentas_Click(object sender, EventArgs e)
         {
-            Ventas frm = Ventas.GetInstancia();
-            frm.MdiParent = this;
-            frm.Show();
-            frm.IdEmpleado = Convert.ToInt32(this.IdEmpleado);
+            //Ventas frm = Ventas.GetInstancia();
+            //frm.MdiParent = this;
+            //frm.Show();
+            //frm.IdEmpleado = Convert.ToInt32(this.IdEmpleado);
 
         }
 
@@ -311,6 +311,14 @@ namespace Capa_Presentacion
             frm.MdiParent = this;
             frm.Show();
             frm.IdEmpleado = Convert.ToInt32(this.IdEmpleado);
+        }
+
+        private void stockDeArtículosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            StockProductos frm = new StockProductos();
+            frm.MdiParent = this;
+            frm.Show();
+        
         }
     }
 }

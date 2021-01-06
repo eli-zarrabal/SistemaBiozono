@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -21,7 +20,7 @@ namespace Capa_Datos
         private int _Stock_Inicial;
         private int _Stock_Actual;
         private DateTime _Fecha_Produccion;
-    
+
 
         //Propiedades
         public int Iddetalle_Ingreso
@@ -75,7 +74,7 @@ namespace Capa_Datos
             set { _Fecha_Produccion = value; }
         }
 
-   
+
         //Constructores 
         public dDetalleIngreso()
         {
@@ -94,7 +93,7 @@ namespace Capa_Datos
             this.Stock_Inicial = stock_inicial;
             this.Stock_Actual = stock_actual;
             this.Fecha_Produccion = fecha_produccion;
-           
+
         }
 
         //Método Insertar
@@ -155,7 +154,7 @@ namespace Capa_Datos
                 ParStock_Actual.Value = Detalle_Ingreso.Stock_Actual;
                 SqlCmd.Parameters.Add(ParStock_Actual);
 
-               
+
 
                 SqlParameter ParFecha_Produccion = new SqlParameter();
                 ParFecha_Produccion.ParameterName = "@Fecha_Produccion";
@@ -165,7 +164,7 @@ namespace Capa_Datos
 
                 //Ejecutamos nuestro comando
 
-                rpta = SqlCmd.ExecuteNonQuery() == 1 ? "OK" : "No se Ingreso el Registro";
+                rpta = SqlCmd.ExecuteNonQuery() == 1 ? "OK" : "NO se Ingreso el Registro";
 
 
             }

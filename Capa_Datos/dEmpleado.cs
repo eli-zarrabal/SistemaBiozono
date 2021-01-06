@@ -128,8 +128,8 @@ namespace Capa_Datos
             string domicilio,
             int tipoempleado,
             int rol,
-            string usuario,
-            string password,
+            string Usuario,
+            string Password,
             string textobuscar)
         {
             this.IdEmpleado = idempleado;
@@ -144,8 +144,8 @@ namespace Capa_Datos
             this.TipoEmpleado = tipoempleado;
             this.Rol = rol;
             //  this.Acceso = acceso;
-             this.Usuario = usuario;
-             this.Password = password;
+             this.Usuario = Usuario;
+             this.Password = Password;
             this.TextoBuscar = textobuscar;
 
         }
@@ -191,7 +191,7 @@ namespace Capa_Datos
                 SqlCmd.Parameters.Add(ParApellidoPaterno);
 
                 SqlParameter ParApellidoMaterno = new SqlParameter();
-                ParApellidoMaterno.ParameterName = "@Apellido_Materno";
+                ParApellidoMaterno.ParameterName = "@Apellido_aterno";
                 ParApellidoMaterno.SqlDbType = SqlDbType.VarChar;
                 ParApellidoMaterno.Size = 50;
                 ParApellidoMaterno.Value = Empleado.Apellido_Materno;
@@ -226,7 +226,7 @@ namespace Capa_Datos
                 SqlCmd.Parameters.Add(ParDomicilio);
 
                 SqlParameter ParTipoEmpleado = new SqlParameter();
-                ParTipoEmpleado.ParameterName = "@Id_TipoEmpleado";
+                ParTipoEmpleado.ParameterName = "@id_tipoempleado";
                 ParTipoEmpleado.SqlDbType = SqlDbType.VarChar;
                 ParTipoEmpleado.Value = Empleado.TipoEmpleado;
                 SqlCmd.Parameters.Add(ParTipoEmpleado);
@@ -367,26 +367,26 @@ namespace Capa_Datos
                 ParRol.Value = Empleado.Rol;
                 SqlCmd.Parameters.Add(ParRol);
 
-                SqlParameter parusuario = new SqlParameter();
-                parusuario.ParameterName = "@Usuario";
-                parusuario.SqlDbType = SqlDbType.VarChar;
-                parusuario.Size = 50;
-                parusuario.Value = Empleado.Usuario;
-                SqlCmd.Parameters.Add(parusuario);
+                SqlParameter parUsuario = new SqlParameter();
+                parUsuario.ParameterName = "@Usuario";
+                parUsuario.SqlDbType = SqlDbType.VarChar;
+                parUsuario.Size = 50;
+                parUsuario.Value = Empleado.Usuario;
+                SqlCmd.Parameters.Add(parUsuario);
 
-                SqlParameter parpassword = new SqlParameter();
-                parpassword.ParameterName = "@Password";
-                parpassword.SqlDbType = SqlDbType.VarChar;
-                parpassword.Size = 50;
-                parpassword.Value = Empleado.Password;
-                SqlCmd.Parameters.Add(parpassword);
+                SqlParameter parPassword = new SqlParameter();
+                parPassword.ParameterName = "@Password";
+                parPassword.SqlDbType = SqlDbType.VarChar;
+                parPassword.Size = 50;
+                parPassword.Value = Empleado.Password;
+                SqlCmd.Parameters.Add(parPassword);
 
               
 
 
                 //Ejecutamos nuestro comando
 
-                rpta = SqlCmd.ExecuteNonQuery() == 1 ? "OK" : "NO se Actualizo el Registro";
+                rpta = SqlCmd.ExecuteNonQuery() == 1 ? "OK" : "No se Actualizo el Registro";
 
 
             }
@@ -515,7 +515,7 @@ namespace Capa_Datos
                 SqlCmd.CommandType = CommandType.StoredProcedure;
 
                 SqlParameter ParEmpleado = new SqlParameter();
-                ParEmpleado.ParameterName = "@Id_Empleado";
+                ParEmpleado.ParameterName = "@idempleado";
                 ParEmpleado.SqlDbType = SqlDbType.Int;
                 ParEmpleado.Value = Empleado.IdEmpleado;
                 SqlCmd.Parameters.Add(ParEmpleado);

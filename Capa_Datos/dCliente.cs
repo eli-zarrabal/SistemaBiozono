@@ -134,7 +134,7 @@ namespace Capa_Datos
                 SqlCmd.Parameters.Add(ParNombre);
 
                 SqlParameter ParApellidoPaterno = new SqlParameter();
-                ParApellidoPaterno.ParameterName = "@Apellido_Paterno";
+                ParApellidoPaterno.ParameterName = "@apellido_Paterno";
                 ParApellidoPaterno.SqlDbType = SqlDbType.VarChar;
                 ParApellidoPaterno.Size = 50;
                 ParApellidoPaterno.Value = Cliente.ApellidoPaterno;
@@ -216,7 +216,7 @@ namespace Capa_Datos
                 SqlCmd.Parameters.Add(ParNombre);
 
                 SqlParameter ParApellidoPaterno = new SqlParameter();
-                ParApellidoPaterno.ParameterName = "@Apellido_Paterno";
+                ParApellidoPaterno.ParameterName = "@apellido_Paterno";
                 ParApellidoPaterno.SqlDbType = SqlDbType.VarChar;
                 ParApellidoPaterno.Size = 50;
                 ParApellidoPaterno.Value = Cliente.ApellidoPaterno;

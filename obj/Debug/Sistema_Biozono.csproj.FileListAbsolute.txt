@@ -53,3 +53,39 @@ C:\ProyectosElizabeth\Sistema_Biozono\obj\Debug\Sistema_Biozono.csproj.CoreCompi
 C:\ProyectosElizabeth\Sistema_Biozono\obj\Debug\Sistema_Biozono.csproj.CopyComplete
 C:\ProyectosElizabeth\Sistema_Biozono\obj\Debug\Sistema_Biozono.exe
 C:\ProyectosElizabeth\Sistema_Biozono\obj\Debug\Sistema_Biozono.pdb
+C:\Sistema Biozono\bin\Debug\Sistema_Biozono.exe.config
+C:\Sistema Biozono\bin\Debug\Sistema_Biozono.exe
+C:\Sistema Biozono\bin\Debug\Sistema_Biozono.pdb
+C:\Sistema Biozono\bin\Debug\Capa_Presentacion.dll
+C:\Sistema Biozono\bin\Debug\Capa_Negocio.dll
+C:\Sistema Biozono\bin\Debug\Capa_Datos.dll
+C:\Sistema Biozono\bin\Debug\Capa_Presentacion.pdb
+C:\Sistema Biozono\bin\Debug\Capa_Negocio.pdb
+C:\Sistema Biozono\bin\Debug\Capa_Datos.pdb
+C:\Sistema Biozono\bin\Debug\Capa_Datos.dll.config
+C:\Sistema Biozono\obj\Debug\Sistema_Biozono.csprojAssemblyReference.cache
+C:\Sistema Biozono\obj\Debug\Sistema_Biozono.Form1.resources
+C:\Sistema Biozono\obj\Debug\Sistema_Biozono.Properties.Resources.resources
+C:\Sistema Biozono\obj\Debug\Sistema_Biozono.csproj.GenerateResource.cache
+C:\Sistema Biozono\obj\Debug\Sistema_Biozono.csproj.CoreCompileInputs.cache
+C:\Sistema Biozono\obj\Debug\Sistema_Biozono.csproj.CopyComplete
+C:\Sistema Biozono\obj\Debug\Sistema_Biozono.exe
+C:\Sistema Biozono\obj\Debug\Sistema_Biozono.pdb
+C:\Sistema Biozono\SistemaBiozono\bin\Debug\Sistema_Biozono.exe.config
+C:\Sistema Biozono\SistemaBiozono\bin\Debug\Sistema_Biozono.exe
+C:\Sistema Biozono\SistemaBiozono\bin\Debug\Sistema_Biozono.pdb
+C:\Sistema Biozono\SistemaBiozono\bin\Debug\Capa_Presentacion.dll
+C:\Sistema Biozono\SistemaBiozono\bin\Debug\Capa_Negocio.dll
+C:\Sistema Biozono\SistemaBiozono\bin\Debug\Capa_Datos.dll
+C:\Sistema Biozono\SistemaBiozono\bin\Debug\Capa_Presentacion.pdb
+C:\Sistema Biozono\SistemaBiozono\bin\Debug\Capa_Negocio.pdb
+C:\Sistema Biozono\SistemaBiozono\bin\Debug\Capa_Datos.pdb
+C:\Sistema Biozono\SistemaBiozono\bin\Debug\Capa_Datos.dll.config
+C:\Sistema Biozono\SistemaBiozono\obj\Debug\Sistema_Biozono.csprojAssemblyReference.cache
+C:\Sistema Biozono\SistemaBiozono\obj\Debug\Sistema_Biozono.Form1.resources
+C:\Sistema Biozono\SistemaBiozono\obj\Debug\Sistema_Biozono.Properties.Resources.resources
+C:\Sistema Biozono\SistemaBiozono\obj\Debug\Sistema_Biozono.csproj.GenerateResource.cache
+C:\Sistema Biozono\SistemaBiozono\obj\Debug\Sistema_Biozono.csproj.CoreCompileInputs.cache
+C:\Sistema Biozono\SistemaBiozono\obj\Debug\Sistema_Biozono.csproj.CopyComplete
+C:\Sistema Biozono\SistemaBiozono\obj\Debug\Sistema_Biozono.exe
+C:\Sistema Biozono\SistemaBiozono\obj\Debug\Sistema_Biozono.pdb

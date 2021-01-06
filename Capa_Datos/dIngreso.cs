@@ -10,12 +10,13 @@ using System.Data.SqlClient;
 namespace Capa_Datos
 {
     public class dIngreso
-    {
-        //Variables
+    {  //Variables
         private int _Idingreso;
-        private int _IdEmpleado;  
+        private int _Idproveedor;
+        private int _IdEmpleado;
         private DateTime _Fecha;
-        private string _Estado;
+     
+
 
         //Propiedades
         public int Idingreso
@@ -24,6 +25,11 @@ namespace Capa_Datos
             set { _Idingreso = value; }
         }
 
+        public int Idproveedor
+        {
+            get { return _Idproveedor; }
+            set { _Idproveedor = value; }
+        }
 
         public int IdEmpleado
         {
@@ -37,12 +43,8 @@ namespace Capa_Datos
             set { _Fecha = value; }
         }
 
-       
-        public string Estado
-        {
-            get { return _Estado; }
-            set { _Estado = value; }
-        }
+      
+
         //Constructores
         public dIngreso()
         {
@@ -50,16 +52,17 @@ namespace Capa_Datos
         }
 
         public dIngreso(int idingreso, int idempleado, 
-            DateTime fecha, string tipo_comprobante, string estado)
+            DateTime fecha)
         {
             this.Idingreso = idingreso;
             this.IdEmpleado = idempleado;
             this.Fecha = fecha;
-            this.Estado = estado;
+        
         }
         //Métodos
-        public string Insertar(dIngreso Ingreso, List<dDetalleIngreso> Detalle)
+        public string Insertar(dIngreso Ingreso, List<dDetalleIngreso> Detalles)
         {
+
             string rpta = "";
             SqlConnection SqlCon = new SqlConnection();
             try
@@ -67,7 +70,7 @@ namespace Capa_Datos
                 //Código
                 SqlCon.ConnectionString = Conexion.Cn;
                 SqlCon.Open();
-                //Establecer la trasacción
+                //Establecer la transacción
                 SqlTransaction SqlTra = SqlCon.BeginTransaction();
                 //Establecer el Comando
                 SqlCommand SqlCmd = new SqlCommand();
@@ -94,44 +97,37 @@ namespace Capa_Datos
                 ParFecha.Value = Ingreso.Fecha;
                 SqlCmd.Parameters.Add(ParFecha);
 
-
-
-                SqlParameter ParEstado = new SqlParameter();
-                ParEstado.ParameterName = "@Estado";
-                ParEstado.SqlDbType = SqlDbType.VarChar;
-                ParEstado.Size = 7;
-                ParEstado.Value = Ingreso.Estado;
-                SqlCmd.Parameters.Add(ParEstado);
-
                 //Ejecutamos nuestro comando
-
-                rpta = SqlCmd.ExecuteNonQuery() == 1 ? "OK" : "No se Ingreso el Registro";
-
+                rpta = SqlCmd.ExecuteNonQuery() == 1 ? "OK" : "NO se Ingreso el Registro";
                 if (rpta.Equals("OK"))
                 {
-                    //Obtener el código del ingreso generado
+                    //Obtenemos el codigo del ingreso que se genero por la base de datos
+
                     this.Idingreso = Convert.ToInt32(SqlCmd.Parameters["@Id_Ingreso"].Value);
-                    foreach (dDetalleIngreso det in Detalle)
+                    foreach (dDetalleIngreso det in Detalles)
                     {
+                        //Establecemos el codigo del ingreso que se autogenero
                         det.Idingreso = this.Idingreso;
-                        //Llamar al método insertar de la clase DDetalle_Ingreso
+                        //Llamamos al metodo insertar de la clase DetalleIngreso
+                        //y le pasamos la conexion y la transaccion que debe de usar
                         rpta = det.Insertar(det, ref SqlCon, ref SqlTra);
                         if (!rpta.Equals("OK"))
                         {
+                            //Si ocurre un error al insertar un detalle de ingreso salimos del for
                             break;
                         }
                     }
-
                 }
                 if (rpta.Equals("OK"))
                 {
+                    //Se inserto todo los detalles y confirmamos la transaccion
                     SqlTra.Commit();
                 }
                 else
                 {
+                    //Algun detalle no se inserto y negamos la transaccion
                     SqlTra.Rollback();
                 }
-
 
             }
             catch (Exception ex)
@@ -143,6 +139,7 @@ namespace Capa_Datos
                 if (SqlCon.State == ConnectionState.Open) SqlCon.Close();
             }
             return rpta;
+
 
         }
         public string Anular(dIngreso Ingreso)

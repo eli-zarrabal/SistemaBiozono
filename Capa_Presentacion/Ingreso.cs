@@ -321,7 +321,7 @@ namespace Capa_Presentacion
                         rpta = NIngreso.Insertar(
                             Convert.ToInt32(this.txtIdEmpleado.Text),
                             dtFecha.Value, 
-                            "EMITIDO", dtDetalle);
+                            dtDetalle);
 
                     }
 
@@ -414,7 +414,7 @@ namespace Capa_Presentacion
 
         private void Ingreso_Load_1(object sender, EventArgs e)
         {
-
+            this.Mostrar();
         }
 
         private void label1_Click(object sender, EventArgs e)

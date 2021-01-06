@@ -17,6 +17,7 @@ namespace Sistema_Biozono
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Capa_Presentacion.Login());
+
         }
     }
 }

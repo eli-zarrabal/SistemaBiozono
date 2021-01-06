@@ -12,8 +12,8 @@ namespace Capa_Negocio
     public class NVenta
     {
         public static string Insertar(
-            int idcliente, 
-            int idempleado, 
+            int idcliente,
+            int idempleado,
             DateTime fecha,
              DataTable dtDetalles)
         {
@@ -21,16 +21,29 @@ namespace Capa_Negocio
             Obj.Idcliente = idcliente;
             Obj.IdEmpleado = idempleado;
             Obj.Fecha = fecha;
-           
+
             List<dDetalleVenta> detalles = new List<dDetalleVenta>();
+            //foreach (DataRow row in dtDetalles.Rows)
+            //{
+            //    dDetalleVenta detalle = new dDetalleVenta();
+            //    detalle.Iddetalle_ingreso = Convert.ToInt32(row["Id_DetalleIngreso"].ToString());
+            //    detalle.Cantidad = Convert.ToInt32(row["Cantidad"].ToString());
+            //    detalle.Precio_Venta = Convert.ToDecimal(row["Precio_Venta"].ToString());
+            //    detalles.Add(detalle);
+            //}
             foreach (DataRow row in dtDetalles.Rows)
             {
                 dDetalleVenta detalle = new dDetalleVenta();
-                detalle.Iddetalle_ingreso = Convert.ToInt32(row["Id_DetalleIngreso"].ToString());
+                detalle.Iddetalle_Ingreso = Convert.ToInt32(row["Id_DetalleIngreso"].ToString());
                 detalle.Cantidad = Convert.ToInt32(row["Cantidad"].ToString());
-                detalle.Precio_Venta = Convert.ToDecimal(row["Precio_Venta"].ToString());  
+                detalle.Precio_Venta = Convert.ToDecimal(row["Precio_Venta"].ToString());
                 detalles.Add(detalle);
+
             }
+
+
+
+
             return Obj.Insertar(Obj, detalles);
         }
         public static string Eliminar(int idventa)
@@ -50,11 +63,11 @@ namespace Capa_Negocio
         //Método BuscarFecha que llama al método BuscarFecha
         //de la clase DVenta de la CapaDatos
 
-        //public static DataTable BuscarFechas(string textobuscar, string textobuscar2)
-        //{
-        //    dVenta Obj = new dVenta();
-        //    return Obj.BuscarFechas(textobuscar, textobuscar2);
-        //}
+        public static DataTable BuscarFechas(string textobuscar, string textobuscar2)
+        {
+            dVenta Obj = new dVenta();
+            return Obj.BuscarFechas(textobuscar, textobuscar2);
+        }
 
         public static DataTable MostrarDetalle(string textobuscar)
         {

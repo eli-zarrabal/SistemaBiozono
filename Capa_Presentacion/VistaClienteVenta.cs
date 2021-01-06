@@ -24,7 +24,7 @@ namespace Capa_Presentacion
         private void OcultarColumnas()
         {
             this.dataListado.Columns[0].Visible = false;
-            //this.dataListado.Columns[1].Visible = false;
+            this.dataListado.Columns[1].Visible = false;
         }
 
         //Método Mostrar
@@ -69,16 +69,39 @@ namespace Capa_Presentacion
 
             Ventas form = Ventas.GetInstancia();
             string par1, par2;
-            par1 = Convert.ToString(this.dataListado.CurrentRow.Cells["Id_Cliente"].Value);
-            par2 = Convert.ToString(this.dataListado.CurrentRow.Cells["Nombre"].Value) + " " +
-                Convert.ToString(this.dataListado.CurrentRow.Cells["Apellido_Materno"].Value) + " " +
-                Convert.ToString(this.dataListado.CurrentRow.Cells["Apellido_Paterno"].Value);
+            par1 = Convert.ToString(this.dataListado.CurrentRow.Cells["Id Cliente"].Value);
+            par2 = Convert.ToString(this.dataListado.CurrentRow.Cells["Nombre"].Value) + " " +  
+                   Convert.ToString(this.dataListado.CurrentRow.Cells["Apellido Materno"].Value) + " " + 
+                   Convert.ToString(this.dataListado.CurrentRow.Cells["Apellido Paterno"].Value);
+                //+ " " 
+                //+
+                //Convert.ToString(this.dataListado.CurrentRow.Cells["Apellido_Materno"].Value) + " " +
+                //Convert.ToString(this.dataListado.CurrentRow.Cells["Apellido_Paterno"].Value);
             form.setCliente(par1, par2);
             this.Hide();
+
+
+
+            //Ventas form = Ventas.GetInstancia();
+            //string par1, par2;
+            //decimal par3, par4;
+            //int par5;
+
+            //par1 = Convert.ToString(this.dataListado.CurrentRow.Cells["Id_Producto"].Value);
+            //par2 = Convert.ToString(this.dataListado.CurrentRow.Cells["Nombre"].Value);
+            //par3 = Convert.ToDecimal(this.dataListado.CurrentRow.Cells["Precio_Compra"].Value);
+            //par4 = Convert.ToDecimal(this.dataListado.CurrentRow.Cells["Precio_Venta"].Value);
+            //par5 = Convert.ToInt32(this.dataListado.CurrentRow.Cells["Stock_Actual"].Value);
+
+            //form.setArticulo(par1, par2, par3, par4, par5);
+            //this.Hide();
+
+
         }
 
         private void VistaClienteVenta_Load(object sender, EventArgs e)
         {
+            Mostrar();
 
         }
     }

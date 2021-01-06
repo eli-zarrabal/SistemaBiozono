@@ -357,7 +357,7 @@
             // trabajadoresToolStripMenuItem
             // 
             this.trabajadoresToolStripMenuItem.Name = "trabajadoresToolStripMenuItem";
-            this.trabajadoresToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.trabajadoresToolStripMenuItem.Size = new System.Drawing.Size(178, 26);
             this.trabajadoresToolStripMenuItem.Text = "Trabajadores";
             this.trabajadoresToolStripMenuItem.Click += new System.EventHandler(this.trabajadoresToolStripMenuItem_Click);
             // 
@@ -388,6 +388,7 @@
             this.stockDeArtículosToolStripMenuItem.Name = "stockDeArtículosToolStripMenuItem";
             this.stockDeArtículosToolStripMenuItem.Size = new System.Drawing.Size(226, 26);
             this.stockDeArtículosToolStripMenuItem.Text = "Stock de Artículos";
+            this.stockDeArtículosToolStripMenuItem.Click += new System.EventHandler(this.stockDeArtículosToolStripMenuItem_Click);
             // 
             // MnuVer
             // 

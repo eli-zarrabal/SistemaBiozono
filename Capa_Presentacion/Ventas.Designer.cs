@@ -37,6 +37,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtIddetalle_ingreso = new System.Windows.Forms.TextBox();
             this.txt_Id_Cliente = new System.Windows.Forms.TextBox();
             this.txtIdEmpleado = new System.Windows.Forms.TextBox();
             this.lblTotal_Pagado = new System.Windows.Forms.Label();
@@ -163,6 +164,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtIddetalle_ingreso);
             this.groupBox1.Controls.Add(this.txt_Id_Cliente);
             this.groupBox1.Controls.Add(this.txtIdEmpleado);
             this.groupBox1.Controls.Add(this.lblTotal_Pagado);
@@ -186,6 +188,15 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Ventas";
+            // 
+            // txtIddetalle_ingreso
+            // 
+            this.txtIddetalle_ingreso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.txtIddetalle_ingreso.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtIddetalle_ingreso.Location = new System.Drawing.Point(196, 77);
+            this.txtIddetalle_ingreso.Name = "txtIddetalle_ingreso";
+            this.txtIddetalle_ingreso.Size = new System.Drawing.Size(55, 22);
+            this.txtIddetalle_ingreso.TabIndex = 46;
             // 
             // txt_Id_Cliente
             // 
@@ -368,7 +379,7 @@
             // 
             this.txtIdarticulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.txtIdarticulo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtIdarticulo.Location = new System.Drawing.Point(25, 96);
+            this.txtIdarticulo.Location = new System.Drawing.Point(135, 77);
             this.txtIdarticulo.Name = "txtIdarticulo";
             this.txtIdarticulo.Size = new System.Drawing.Size(55, 22);
             this.txtIdarticulo.TabIndex = 31;
@@ -659,5 +670,6 @@
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TextBox txtIdEmpleado;
         private System.Windows.Forms.TextBox txt_Id_Cliente;
+        private System.Windows.Forms.TextBox txtIddetalle_ingreso;
     }
 }

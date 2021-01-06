@@ -12,15 +12,15 @@ namespace Capa_Negocio
     public class NIngreso
     {
         public static string Insertar(
-            int idtrabajador, 
+            int idempleado, 
             DateTime fecha,
-            string estado, 
+           
             DataTable dtDetalles)
         {
             dIngreso Obj = new dIngreso();
-            Obj.IdEmpleado = idtrabajador;
+            Obj.IdEmpleado = idempleado;
             Obj.Fecha = fecha;   
-            Obj.Estado = estado;
+           
             List<dDetalleIngreso> detalles = new List<dDetalleIngreso>();
             foreach (DataRow row in dtDetalles.Rows)
             {

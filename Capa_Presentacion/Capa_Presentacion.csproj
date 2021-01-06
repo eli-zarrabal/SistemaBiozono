@@ -43,17 +43,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="InicioResumen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InicioResumen.Designer.cs">
+      <DependentUpon>InicioResumen.cs</DependentUpon>
+    </Compile>
     <Compile Include="Mantenimiento.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Mantenimiento.Designer.cs">
       <DependentUpon>Mantenimiento.cs</DependentUpon>
-    </Compile>
-    <Compile Include="MenuPrincipal.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MenuPrincipal.Designer.cs">
-      <DependentUpon>MenuPrincipal.cs</DependentUpon>
     </Compile>
     <Compile Include="ProcesoClarificado.cs">
       <SubType>Form</SubType>
@@ -111,6 +111,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Sistema_Ventas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sistema_Ventas.Designer.cs">
+      <DependentUpon>Sistema_Ventas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StockProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StockProductos.Designer.cs">
+      <DependentUpon>StockProductos.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControl1.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -153,11 +165,11 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="InicioResumen.resx">
+      <DependentUpon>InicioResumen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Mantenimiento.resx">
       <DependentUpon>Mantenimiento.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MenuPrincipal.resx">
-      <DependentUpon>MenuPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProcesoClarificado.resx">
       <DependentUpon>ProcesoClarificado.cs</DependentUpon>
@@ -194,6 +206,12 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Sistema_Ventas.resx">
+      <DependentUpon>Sistema_Ventas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StockProductos.resx">
+      <DependentUpon>StockProductos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ventas.resx">
       <DependentUpon>Ventas.cs</DependentUpon>
     </EmbeddedResource>
@@ -217,6 +235,24 @@
   <ItemGroup>
     <Content Include="obj\Debug\Capa_Presentacion.csproj.FileListAbsolute.txt" />
     <Content Include="obj\Debug\TempPE\Properties.Resources.Designer.cs.dll" />
+    <None Include="Resources\Inventario.png" />
+    <None Include="Resources\pagos02.png" />
+    <None Include="Resources\ventas04.png" />
+    <None Include="Resources\prodcutos03.png" />
+    <None Include="Resources\empleados01.png" />
+    <None Include="Resources\reportes.png" />
+    <None Include="Resources\boss_man-128.png" />
+    <None Include="Resources\res.png" />
+    <None Include="Resources\minimazar.png" />
+    <None Include="Resources\maxi.png" />
+    <None Include="Resources\cerrar.png" />
+    <None Include="Resources\IcoBio.png" />
+    <None Include="Resources\empleados-0.png" />
+    <None Include="Resources\clientes-0.png" />
+    <None Include="Resources\venta-0.png" />
+    <None Include="Resources\producto-0.png" />
+    <None Include="Resources\Mobile-Menu-Icon.png" />
+    <None Include="Resources\img_login.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\Debug\" />

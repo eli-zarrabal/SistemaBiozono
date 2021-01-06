@@ -12,6 +12,9 @@ namespace Capa_Presentacion
 {
     public partial class Login : Form
     {
+
+        public static String usuario;
+       
         public Login()
         {
             InitializeComponent();
@@ -33,11 +36,17 @@ namespace Capa_Presentacion
                 frm.Apellido_Materno = Datos.Rows[0][1].ToString();
                 frm.Apellido_Paterno = Datos.Rows[0][2].ToString();
                 frm.IdRol = Datos.Rows[0][3].ToString();
+              
                 frm.Show();
                 this.Hide();
 
             }
 
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+            LblHora.Text = DateTime.Now.ToLongDateString();
         }
 
         //private void BtnIngresar_Click(object sender, EventArgs e)
