@@ -295,7 +295,7 @@ namespace Capa_Presentacion
             this.lblTotal_Pagado.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["total"].Value);
            
             this.MostrarDetalle();
-            this.tabControl1.SelectedIndex = 1;
+            this.TabAjustes.SelectedIndex = 1;
         }
 
 

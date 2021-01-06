@@ -67,7 +67,7 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Location = new System.Drawing.Point(0, 54);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(871, 480);
@@ -84,9 +84,9 @@
             this.tabPage1.Controls.Add(this.txtBuscar);
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage1.Size = new System.Drawing.Size(863, 454);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Listado";
@@ -100,7 +100,7 @@
             this.dataListado.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Eliminar});
             this.dataListado.Location = new System.Drawing.Point(10, 87);
-            this.dataListado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataListado.Margin = new System.Windows.Forms.Padding(2);
             this.dataListado.MultiSelect = false;
             this.dataListado.Name = "dataListado";
             this.dataListado.ReadOnly = true;
@@ -134,7 +134,7 @@
             // 
             this.chkEliminar.AutoSize = true;
             this.chkEliminar.Location = new System.Drawing.Point(10, 64);
-            this.chkEliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chkEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.chkEliminar.Name = "chkEliminar";
             this.chkEliminar.Size = new System.Drawing.Size(62, 17);
             this.chkEliminar.TabIndex = 5;
@@ -147,7 +147,7 @@
             this.btnEliminar.BackColor = System.Drawing.Color.Silver;
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEliminar.Location = new System.Drawing.Point(329, 27);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(81, 28);
             this.btnEliminar.TabIndex = 3;
@@ -160,7 +160,7 @@
             this.btnBuscar.BackColor = System.Drawing.Color.Silver;
             this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBuscar.Location = new System.Drawing.Point(234, 27);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(79, 28);
             this.btnBuscar.TabIndex = 2;
@@ -171,7 +171,7 @@
             // txtBuscar
             // 
             this.txtBuscar.Location = new System.Drawing.Point(78, 28);
-            this.txtBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(133, 20);
             this.txtBuscar.TabIndex = 1;
@@ -190,9 +190,9 @@
             // 
             this.tabPage2.Controls.Add(this.groupBox1);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage2.Size = new System.Drawing.Size(863, 454);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Mantenimiento";
@@ -210,9 +210,9 @@
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Location = new System.Drawing.Point(20, 18);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(592, 220);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
@@ -223,7 +223,7 @@
             this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCancelar.Location = new System.Drawing.Point(383, 183);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(80, 27);
             this.btnCancelar.TabIndex = 9;
@@ -236,7 +236,7 @@
             this.btnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEditar.Location = new System.Drawing.Point(281, 183);
-            this.btnEditar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEditar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(80, 27);
             this.btnEditar.TabIndex = 8;
@@ -249,7 +249,7 @@
             this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnGuardar.Location = new System.Drawing.Point(186, 183);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(2);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(80, 27);
             this.btnGuardar.TabIndex = 7;
@@ -262,7 +262,7 @@
             this.btnNuevo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNuevo.Location = new System.Drawing.Point(88, 183);
-            this.btnNuevo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnNuevo.Margin = new System.Windows.Forms.Padding(2);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(80, 26);
             this.btnNuevo.TabIndex = 6;
@@ -275,7 +275,7 @@
             this.txtNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNombre.Location = new System.Drawing.Point(88, 92);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(226, 20);
             this.txtNombre.TabIndex = 4;
@@ -285,7 +285,7 @@
             this.txtIdarticulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.txtIdarticulo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtIdarticulo.Location = new System.Drawing.Point(194, 133);
-            this.txtIdarticulo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtIdarticulo.Margin = new System.Windows.Forms.Padding(2);
             this.txtIdarticulo.Name = "txtIdarticulo";
             this.txtIdarticulo.Size = new System.Drawing.Size(94, 20);
             this.txtIdarticulo.TabIndex = 3;
@@ -335,7 +335,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Maroon;
+            this.label1.ForeColor = System.Drawing.SystemColors.MenuText;
             this.label1.Location = new System.Drawing.Point(9, 9);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";

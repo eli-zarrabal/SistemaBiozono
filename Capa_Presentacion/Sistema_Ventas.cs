@@ -107,50 +107,5 @@ namespace Capa_Presentacion
         {
             pictureBox1_Click(null, e);
         }
-
-        private void PanelContenedor_Paint(object sender, PaintEventArgs e)
-        {
-            //label3.Text = "Usuario:" + " " + NEmpleado.Login(this.label1, this.label2);
-        }
-
-        private void btnVentas_Click(object sender, EventArgs e)
-        {
-            
-            Ventas frm = Ventas.GetInstancia();
-            frm.Show();
-            frm.IdEmpleado = Convert.ToInt32(this.IdEmpleado);
-
-
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnClientes_Click(object sender, EventArgs e)
-        {
-            Cliente frm = new Cliente();
-            frm.Show();
-        }
-
-        private void btnEmpleados_Click(object sender, EventArgs e)
-        {
-            Empleado frm = new Empleado();        
-            frm.Show();
-        }
-
-        private void btnMantenimiento_Click(object sender, EventArgs e)
-        {
-
-          
-
-        }
-
-        private void lbluser_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
