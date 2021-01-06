@@ -419,9 +419,14 @@ namespace Capa_Presentacion
 
         }
 
+        private void txtTelefono_TextChanged(object sender, EventArgs e)
+        {
 
+        }
 
-       
+        private void cbBuscar_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
+        }
     }
 }

@@ -19,14 +19,20 @@ namespace Capa_Presentacion
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            lblhora.Text = DateTime.Now.ToString("hh:mm:ss ");
-            lblFecha.Text = DateTime.Now.ToLongDateString();
+           // lblhora.Text = DateTime.Now.ToString("HH:mm:ssss");
+            //lblFecha.Text = DateTime.Now.ToLongDateString();
         }
 
         private void InicioResumen_Load(object sender, EventArgs e)
         {
            // lblhora.Text = DateTime.Now.ToString("hh:mm:ss ");
            // lblFecha.Text = DateTime.Now.ToLongDateString();
+        }
+
+        private void tmFechaHora_Tick(object sender, EventArgs e)
+        {
+            lblFecha.Text = DateTime.Now.ToLongDateString();
+            lblhora.Text = DateTime.Now.ToString("HH:mm:ssss");
         }
     }
 }

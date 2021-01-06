@@ -109,7 +109,6 @@ C:\Sistema Biozono\SistemaBiozono\Capa_Presentacion\obj\Debug\Capa_Presentacion.
 C:\Sistema Biozono\SistemaBiozono\Capa_Presentacion\obj\Debug\Capa_Presentacion.Cliente.resources
 C:\Sistema Biozono\SistemaBiozono\Capa_Presentacion\obj\Debug\Capa_Presentacion.Empleado.resources
 C:\Sistema Biozono\SistemaBiozono\Capa_Presentacion\obj\Debug\Capa_Presentacion.FormPrincipal.resources
-C:\Sistema Biozono\SistemaBiozono\Capa_Presentacion\obj\Debug\Capa_Presentacion.Ingreso.resources
 C:\Sistema Biozono\SistemaBiozono\Capa_Presentacion\obj\Debug\Capa_Presentacion.Login.resources
 C:\Sistema Biozono\SistemaBiozono\Capa_Presentacion\obj\Debug\Capa_Presentacion.ProcesoPurificado.resources
 C:\Sistema Biozono\SistemaBiozono\Capa_Presentacion\obj\Debug\Capa_Presentacion.Producto.resources
@@ -125,3 +124,4 @@ C:\Sistema Biozono\SistemaBiozono\Capa_Presentacion\obj\Debug\Capa_Presentacion.
 C:\Sistema Biozono\SistemaBiozono\Capa_Presentacion\obj\Debug\Capa_Presentacion.dll
 C:\Sistema Biozono\SistemaBiozono\Capa_Presentacion\obj\Debug\Capa_Presentacion.pdb
 C:\Sistema Biozono\SistemaBiozono\Capa_Presentacion\obj\Debug\Capa_Presentacion.InicioResumen.resources
+C:\Sistema Biozono\SistemaBiozono\Capa_Presentacion\obj\Debug\Capa_Presentacion.Ingreso.resources

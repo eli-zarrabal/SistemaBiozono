@@ -99,5 +99,15 @@ namespace Capa_Presentacion
         {
             pictureBox1_Click(null, e);
         }
+
+        private void btnInventario_Click(object sender, EventArgs e)
+        {
+            AbrirFormEnPanel(new Ingreso());
+        }
+
+        private void btnEmpleados_Click(object sender, EventArgs e)
+        {
+            AbrirFormEnPanel(new Empleado());
+        }
     }
 }
